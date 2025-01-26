@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="container">
+    <div class="row">
+        <div class="col-md-35">
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="col-md-65">
+            <article>
+                <hgroup class="development-header">
+                    <h1>{{page.title}}</h1>
+                    <p class="development-address">{{page.address}}</p>
+                    <span {% case page.phase %}
+                    {% when 'Under Review' %} class="tag bg-under-review"
+                    {% when 'Approved' %}class="tag bg-approved"
+                    {% when 'Withdrawn' %}class="tag bg-withdrawn"
+                    {% when 'Complete' %}class="tag bg-complete"{% endcase %}>{{page.phase}}</span>
+                    <span class="tag" >{{page.units}} Units</span>
+                    <span class="tag">{{page.developer}}</span>
+                </hgroup>
+                <br>
+                {{ content }}
+                <h2>Permits</h2>
+                {% for permit in page.permits %}
+                    <p><strong><a href="https://sjpermits.org/permits/general/emailpermitquery.asp?permitnum={{permit[0]}}">{{permit[0]}}</a></strong> {{permit[1].status}}</p>
+                    <p>{{permit[1].description}}</p>
+                {% endfor %}
+            </article>
+            <div class="edit-metadata">
+                <span id="date">Last edited: 1/22/2025</span>
+                <span id="contribute">Contribute</span>
+                <span id="name">Edited by: Jake Wilde</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% include map.html geometry=page.geometry zoom=15 name="map" %}

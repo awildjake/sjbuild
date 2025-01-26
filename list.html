@@ -1,0 +1,129 @@
+---
+layout: default
+title: List
+---
+{% assign developments_by_units = site.developments | sort: "units" %}
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3 col">
+        <div class="box">
+          <div class="filter-dropdown">
+            <!-- Dropdown for filtering -->
+            <label for="phase-filter">Filter by Phase:</label>
+            <select id="phase-filter" class="filter-select">
+              <option value="All">All</option>
+              <option value="Approved">Approved</option>
+              <option value="Under Review">Under Review</option>
+              <option value="Complete">Complete</option>
+              <option value="Withdrawn">Withdrawn</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <h1>All Developments</h1>
+        <table class="feature" style="width: 100%;">
+          <thead>
+            <tr>
+              <th>Units</th>
+              <th>Development</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="developments-list">
+            {% for development in developments_by_units %}
+            <tr data-phase="{{ development.phase }}">
+              <td>{{ development.units }}</td>
+              <td><a href="{{ development.url }}">{{ development.title }}</a></td>
+              <td>
+                {% case development.phase %}
+                {% when 'Under Review' %}
+                  <span class="tag bg-under-review white">{{ development.phase }}</span>
+                {% when 'Approved' %}
+                  <span class="tag bg-approved white">{{ development.phase }}</span>
+                {% when 'Withdrawn' %}
+                  <span class="tag bg-withdrawn white">{{ development.phase }}</span>
+                {% when 'Complete' %}
+                  <span class="tag bg-complete white">{{ development.phase }}</span>
+                {% endcase %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".filter-button");
+    const rows = document.querySelectorAll("#developments-list tr");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selectedPhase = button.getAttribute("data-phase");
+        
+        // Update button styles
+        buttons.forEach((btn) => btn.classList.remove("selected"));
+        button.classList.add("selected");
+
+        // Filter rows
+        rows.forEach((row) => {
+          const rowPhase = row.getAttribute("data-phase");
+          if (selectedPhase === "All" || rowPhase === selectedPhase) {
+            row.style.display = ""; // Show row
+          } else {
+            row.style.display = "none"; // Hide row
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.getElementById("phase-filter");
+    const rows = document.querySelectorAll("#developments-list tr");
+
+    dropdown.addEventListener("change", () => {
+      const selectedPhase = dropdown.value;
+      
+      // Filter rows
+      rows.forEach((row) => {
+        const rowPhase = row.getAttribute("data-phase");
+        if (selectedPhase === "All" || rowPhase === selectedPhase) {
+          row.style.display = ""; // Show row
+        } else {
+          row.style.display = "none"; // Hide row
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .filter-dropdown {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+  }
+  .filter-dropdown label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+  }
+  .filter-dropdown select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+      cursor: pointer;
+  }
+  .filter-dropdown select:focus {
+      border-color: #007bff;
+      outline: none;
+  }
+</style>

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home
+geometry: [37.322729, -121.915732]
+---
+<div class="container" style="height: 100vh;">
+    <div class="flex-row">
+        <div class="flex-col" id="home-col-1">
+            <p class="first">Stay up to date with housing in&nbsp;<span class="special-highlight">San&nbsp;Jose.</span></p>
+            <p class="second">SJ Build is a tool designed to help you stay up to date with housing developments in the City of San Jose by making publicly available information easily accesible.</p>
+            <div class="child-box">
+                <h2>Map of Projects</h2>
+                <p>View and filter residential developments on a map of San Jose.</p>
+                <a href="/map">Go to map →</a>
+            </div>
+            <div class="child-box">
+                <h2>List of Projects</h2>
+                <p>Search a list of residential developments by the number of units.</p>
+                <a href="/list">Go to list →</a>
+            </div>
+        </div>
+        <div class="flex-col" id="home-col-2">
+            <div id="homeMap"></div>
+        </div>
+    </div>
+    <div class="flex-row" >
+        
+    </div>
+</div>
+{% include map.html geometry=page.geometry zoom=13 name="homeMap" %}

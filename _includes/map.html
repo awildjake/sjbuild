@@ -1,0 +1,97 @@
+<script>
+    var initialView = {{ include.geometry | jsonify }};
+    var initialZoom = {{ include.zoom }}
+    var mapName = "{{ include.name }}"
+
+    var map = L.map(mapName).setView(initialView, initialZoom);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var underReviewLayer = L.layerGroup([]);
+    var approvedLayer = L.layerGroup([]);
+    var completeLayer = L.layerGroup([]);
+    var withdrawnLayer = L.layerGroup([]);
+
+    var overlayMaps = {
+        "<span class='tag bg-under-review'>Under Review</span>": underReviewLayer,
+        "<span class='tag bg-approved'>Approved</span>": approvedLayer,
+        "<span class='tag bg-complete'>Complete</span>": completeLayer,
+        "<span class='tag bg-withdrawn'>Withdrawn</span>": withdrawnLayer,
+    };
+
+    if (mapName === "mainMap" || mapName === "homeMap") {
+        var layerControl = L.control.layers(null, overlayMaps, {collapsed:false, position:'topright'}).addTo(map);
+    };
+    
+
+    var underReviewIcon = new L.Icon({
+        iconUrl: '/assets/images/leaflet_color_markers/marker-icon-2x-yellow.png',
+        shadowUrl: '/assets/images/leaflet_color_markers/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    var approvedIcon = new L.Icon({
+        iconUrl: '/assets/images/leaflet_color_markers/marker-icon-2x-blue.png',
+        shadowUrl: '/assets/images/leaflet_color_markers/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    var completeIcon = new L.Icon({
+        iconUrl: '/assets/images/leaflet_color_markers/marker-icon-2x-green.png',
+        shadowUrl: '/assets/images/leaflet_color_markers/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    var withdrawnIcon = new L.Icon({
+        iconUrl: '/assets/images/leaflet_color_markers/marker-icon-2x-grey.png',
+        shadowUrl: '/assets/images/leaflet_color_markers/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    {% for item in site.developments %}
+        {% if item.phase == 'Under Review'%}
+        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: underReviewIcon}).addTo(underReviewLayer);
+        {% elsif item.phase == 'Approved'%}
+        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: approvedIcon}).addTo(approvedLayer);
+        {% elsif item.phase == 'Complete'%}
+        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: completeIcon}).addTo(completeLayer);
+        {% elsif item.phase == 'Withdrawn'%}
+        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: withdrawnIcon}).addTo(withdrawnLayer);
+        {% endif %}
+        marker.bindPopup("<h4>{{item.title}}</h4> {{item.units}} Units </br> By: {{item.developer}} </br> <em>Click to view details</em>");
+
+
+
+        marker.on('mouseover', function() { this.openPopup() });
+        marker.on('mouseout', function() { this.closePopup(); });
+        marker.on('click', function() { open('{{item.url}}', '_self'); });
+        //marker.on('click', function() { open('jake-wil.de/developments/{{ mylink | join: "-" }}/', '_blank'); });
+    {% endfor %}
+
+    function getColor(d) {
+        return d == 'Under Review' ? '#CAC428' :
+            d == 'Approved'  ? '#2A81CB' :
+            d == 'Complete'  ? '#2AAD27' :
+            d == 'Withdrawn'   ? '#7B7B7B' :
+                        '#555';
+    }
+
+    underReviewLayer.addTo(map);
+    completeLayer.addTo(map);
+    approvedLayer.addTo(map);
+    withdrawnLayer.addTo(map);
+</script>
