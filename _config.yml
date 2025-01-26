@@ -33,6 +33,7 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-last-modified-at
 
 collections:
   developments:
@@ -71,3 +72,7 @@ defaults:
 #   - vendor/ruby/
 exclude: 
   - README.md
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: '%d-%b-%y'
