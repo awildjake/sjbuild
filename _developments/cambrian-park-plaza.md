@@ -30,6 +30,6 @@ permits:
         address: 14420 Union Ave, San Jose, CA 95124
         description: "Permit Adjustment to allow a one-year time extension of a Planned Development Permit (PD20-007) approved on November 2, 2022, which has an expiration date of November 2, 2026. This extension is granted for the term of November 2, 2026 to November 2, 2027. This is the first of two one-year extensions allowed per Condition #2 of the approved permit."
         names: Michael Strahs w/ Kimco Realty; Scott Henson w/ Weingarten Realty;
-geometry: [37.325206967446995, -121.90410764479401]
+geometry: [37.260318285607354, -121.92968554308294]
 published: True
 ---
