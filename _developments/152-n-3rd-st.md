@@ -21,4 +21,6 @@ published: True
 
 ["Office to Housing Conversion Proposed at 152 North Third Street, San Jose."](https://sfyimby.com/2025/01/office-to-housing-conversion-proposed-at-152-north-third-street-san-jose.html) *SF YIMBY*, January 25, 2025.
 
+> The plans aim to bring around 133 units to the nine-story complex at 152 North 3rd Street.
+
 ["Downtown San Jose office building might convert to housing site."](https://www.mercurynews.com/2025/01/16/san-jose-home-house-office-real-estate-build-property-develop-economy/) *Mercury News*, January 16, 2025.
