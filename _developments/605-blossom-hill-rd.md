@@ -6,7 +6,7 @@ municipality: San Jose
 units: 239
 phase: Approved
 permits:
-    PRE23-00139:
+    SP20-012:
         status: Approved
         initial_date: 2020-04-15
         final_date: 2022-08-09
@@ -22,6 +22,6 @@ permits:
         address: 605 Blossom Hill Rd, Los Gatos, CA 95032
         description: Tentative map extension for previously approved Tentative Map (T20-012)
         names: Melissa Durkin w/ Green Republic Blossom Hill LLC;
-geometry: [37.2362969698553, -121.96743149039506]
+geometry: [37.251435563574496, -121.84104213872737]
 published: True
 ---
