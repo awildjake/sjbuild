@@ -5,6 +5,7 @@ developer: Miramar Capital
 municipality: San Jose
 units: 689
 phase: Approved
+permits:
     PD20-011:
         status: Approved
         initial_date: 2020-12-18
