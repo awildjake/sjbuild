@@ -3,7 +3,7 @@ title: Cambrian Park Plaza
 address: 14420 Union Ave, San Jose, CA 95124
 developer: Weingarten Investors
 municipality: San Jose
-units: 305
+units: 405
 phase: Approved
 permits:
     PRE16-196:
