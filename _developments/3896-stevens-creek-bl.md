@@ -14,6 +14,6 @@ permits:
         address: 3896 Stevens Creek Blvd, San Jose, CA 95117
         description: Enhanced Preliminary Review for a mixed-use project with 13,000 sf of commercial and 524 multifamily residential units, including Density Bonus.
         names: Douglas Oliver w/ TCA Architects; Holland Development LLC.
-geometry: [37.322896574497584, -121.96868745690078]
+geometry: [37.32254752732369, -121.9692968420486]
 published: True
 ---

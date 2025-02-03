@@ -4,7 +4,7 @@ address: 60 Stockton Ave, San Jose, CA 95126
 developer: Urban Catalyst
 municipality: San Jose
 units: 472
-phase: Approved
+phase: Withdrawn
 permits:
     PRE21-127:
         status: Under Review
