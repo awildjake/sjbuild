@@ -65,3 +65,6 @@ permits:
 geometry: [37.37301511141891, -121.87731946207253]
 published: True
 ---
+## In the news
+
+["San Jose affordable housing development could sprout near BART stop."](https://www.mercurynews.com/2025/01/28/san-jose-home-housing-affordable-build-property-develop-real-estate/) *Mercury News*, January 28, 2025.
