@@ -67,11 +67,11 @@ published: True
 ---
 ## Description
 
-Stevens Creek Promenade is a collection of proposals from Miramar Capital Group through their affiliate MPG Stevens Creek Owner LLC for a 9.2-acre site at the intersection of Lopina Way and Stevens Creek Boulevard.
+Stevens Creek Promenade is a proposal by Miramar Capital Group through their affiliate MPG Stevens Creek Owner LLC for a 9.2-acre site at the intersection of Lopina Way and Stevens Creek Boulevard.
 
 The currently approved project proposes three 6-story residential buildings totaling 580 units—of which 173 are affordable—and a 250-room hotel with 8,500 square feet of commercial space. The project will provide 494 residential and 210 parking spaces for the hotel, totaling 704. Additional amenities include two privately owned publicly accessible paseos, one 14,000 square feet and the other 32,500 square feet.
 
-An amendment to the project splits construction into two phases, with the first phase consisting of only a 173-unit affordable building.
+Construction will take place in two phases, with the first phase consisting of only a 173-unit affordable apartment building.
 
 Two additions and revisions are currently under review that may alter the project's scope.
 

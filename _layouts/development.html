@@ -2,17 +2,12 @@
 layout: default
 ---
 <div class="container">
-    <div class="row">
-        <div class="col-md-35">
-            <div class="map-container">
-                <div id="map"></div>
-            </div>
-        </div>
-        <div class="col-md-65">
-            <article>
-                <hgroup class="development-header">
-                    <h1>{{page.title}}</h1>
-                    <p class="development-address">{{page.address}}</p>
+    <div class="row justify-content-center">
+        <div class="container2">
+            <hgroup class="development-header">
+                <h1 style="margin: 0;">{{page.title}}</h1>
+                <em>{{page.address}}</em>
+                <div >
                     <span {% case page.phase %}
                     {% when 'Under Review' %} class="tag bg-under-review"
                     {% when 'Approved' %}class="tag bg-approved"
@@ -20,8 +15,14 @@ layout: default
                     {% when 'Complete' %}class="tag bg-complete"{% endcase %}>{{page.phase}}</span>
                     <span class="tag" >{{page.units}} Units</span>
                     <span class="tag">{{page.developer}}</span>
-                </hgroup>
-                <br>
+                </div>
+            </hgroup>
+        </div>
+        <div class="col-md-65">
+            <article>
+                <div class="map-container" style="box-shadow: 0 3px 10px rgba(0, 0, 0, .1);">
+                    <div id="map"></div>
+                </div>
                 {{ content }}
                 <h2>Permits</h2>
                 {% for permit in page.permits %}
@@ -34,6 +35,7 @@ layout: default
                 <span id="contribute"><a href="https://github.com/awildjake/sjbuild/blob/main/_developments/{{page.name}}">Edit</a></span>
             </div>
         </div>
+
     </div>
 </div>
 {% include map.html geometry=page.geometry zoom=15 name="map" %}

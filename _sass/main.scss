@@ -20,36 +20,73 @@
     --step-4: clamp(2.0736rem, 1.6803rem + 1.9665vw, 3.2043rem);
     --step-5: clamp(2.4883rem, 1.9606rem + 2.6385vw, 4.0054rem);
 }
-.bg-under-review {
-    background-color: var(--under-review-color);
-}
-.bg-approved {
-    background-color: var(--approved-color);
-}
-.bg-complete {
-    background-color: var(--completed-color);
-}
-.bg-withdrawn {
-    background-color: var(--withdrawn-color);
+html {
+    font-family: sans-serif;
+    font-size: 125%;
+    -webkit-font-smoothing: antialiased;
 }
 body {
-    font-family: var(--main-font);
-    font-size: var(--step--1);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: calc(1.5em + .2vw);
     background-color: var(--bg-color);
     color: var(--text-primary);
     margin: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
+    /* Change heading typefaces here */
+    font-family: sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    line-height: 2.5rem;
 }
 p {
-    line-height: 1.5;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+
 }
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1 {
+    font-size: 2.50rem;
+}
+h2 {
+    font-size: 2.25rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+table {
+    margin-top: 1.5rem;
+    border-spacing: 0px;
+    border-collapse: collapse;
+  }
+  table td,
+  table th {
+    padding: 0;
+    line-height: 33px;
+  }
+.functional {
+    font-size: 0.75rem;
+}
+
 .wrap .grid, .grid.wrap {
     max-width: 978px;
     margin: 0 auto;
@@ -97,7 +134,7 @@ header {
     padding: 1em;
     height: 110px;
     border-bottom: 5px solid #0f5988;
-    font-size: var(--step-0);
+
     font-weight: 600;
 }
 .flexbox {
@@ -174,10 +211,6 @@ nav li {
         max-width: 100%;
     }
 }
-
-h1 {
-    font-size: var(--step-2);
-}
 * {
     margin: 0;
     padding: 0;
@@ -195,7 +228,6 @@ a:hover {
     color: #4385BE;
 }
 a[href^="http"] {
-    display: inline-block;
     background-image: url('/assets/images/up-right-from-square-solid.svg');
     background-position: right 33%;
     background-size: 1em;
@@ -205,10 +237,7 @@ a[href^="http"] {
 img {
     width: 100%;
 }
-.development-address {
-    margin-top: 0px;
-    margin-bottom: 0.5em;
-}
+
 
 
 @media (min-width: 768px) {
@@ -218,7 +247,7 @@ img {
     };
     header {
         height: 75px;
-        font-size: var(--step-0);
+
     };
     .site-logo {
         margin: auto;
@@ -320,7 +349,26 @@ footer {
     padding-left: 15px;
     margin-bottom: 1em;
 }
-.col-md-65, .col-md-3, .col-md-100 {
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 65%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 1em;
+}
+.col-md-100 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-65, .col-md-3{
     min-height: 100vh;
     /*border: solid 1px #ccc;
     border-radius: 0px;
@@ -357,7 +405,7 @@ footer {
 }
 
 body > .container {
-    margin-top: 20px;
+    margin-top: 40px;
     min-height: 400px;
 }
 .container {
@@ -476,8 +524,6 @@ body > .container {
 
 br {clear: both;} 
 
-p{margin-bottom: .5em;}
-
 .map-title {
 
 }
@@ -524,7 +570,10 @@ blockquote {
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
-  }
+}
+blockquote > p {
+    margin: 0;
+}
 p.first {
     font-size: var(--step-3);
     font-weight: 600;
@@ -565,4 +614,16 @@ p.second {
 }
 .special-highlight {
     color: #0f5988;
+}
+.bg-under-review {
+    background-color: var(--under-review-color);
+}
+.bg-approved {
+    background-color: var(--approved-color);
+}
+.bg-complete {
+    background-color: var(--completed-color);
+}
+.bg-withdrawn {
+    background-color: var(--withdrawn-color);
 }
