@@ -87,46 +87,6 @@ table {
     font-size: 0.75rem;
 }
 
-.wrap .grid, .grid.wrap {
-    max-width: 978px;
-    margin: 0 auto;
-}
-.grid {
-    margin-bottom: 1em;
-    --gap: clamp(1rem, 6vw, 3rem);
-    --full: minmax(var(--gap), 1fr);
-    --content: min(50ch, 100% - var(--gap) * 2);
-    --popout: minmax(0, 2rem);
-    --feature: minmax(0, 5rem);
-    display: grid;
-    grid-template-columns:
-      [full-start] var(--full)
-      [feature-start] var(--feature)
-      [popout-start] var(--popout)
-      [content-start] var(--content) [content-end]
-      var(--popout) [popout-end]
-      var(--feature) [feature-end]
-      var(--full) [full-end];
-}
-.grid > * {
-    grid-column: content;
-}
-  
-.popout {
-    grid-column: popout;
-}
-  
-.feature {
-    grid-column: feature;
-}
-  
-.full {
-    grid-column: full;
-}
-body > .container {
-    margin-top: 20px;
-}
-
 header {
     font-family: var(--header-font);
     background: #0b456a;
@@ -211,23 +171,6 @@ header {
 header a {
     text-decoration: none;
 }
-a {
-    text-decoration: underline;
-    color: #808080;
-}
-a:hover {
-    color: #4385BE;
-}
-a[href^="http"] {
-    background-image: url('/assets/images/up-right-from-square-solid.svg');
-    background-position: right 33%;
-    background-size: 1em;
-    background-repeat: no-repeat;
-    padding-right: 1em; /* Adjust padding for the icon space */
-}
-img {
-    width: 100%;
-}
 
 .navbar-toggler {
     background-color: white;
@@ -235,7 +178,7 @@ img {
     color: #072e46;
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Hidden on larger screens */
+    display: none;
     border-radius: 5px;
     padding-left: .2em;
     padding-right: .2em;
@@ -283,7 +226,23 @@ img {
     }
 }
 
-
+a {
+    text-decoration: underline;
+    color: #808080;
+}
+a:hover {
+    color: #4385BE;
+}
+a[href^="http"] {
+    background-image: url('/assets/images/up-right-from-square-solid.svg');
+    background-position: right 33%;
+    background-size: 1em;
+    background-repeat: no-repeat;
+    padding-right: 1em; /* Adjust padding for the icon space */
+}
+img {
+    width: 100%;
+}
 
 article {
     margin-bottom: 1em;
@@ -513,7 +472,7 @@ body > .container {
 }
 /* Map that displays on the main dedicated map page */
 #mainMap {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 88px);
 }
 /* Map that displays within the home page hero */
 #homeMap {
