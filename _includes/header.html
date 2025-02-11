@@ -1,7 +1,14 @@
 <header>
     <div class="flexbox">
-        <div class="site-logo">SJ BUILD</div>
-        <nav class="main-nav">
+        <div class="site-container">
+            <div class="site-logo">
+                SJ BUILD
+            </div>
+            <button class="navbar-toggler" onclick="toggleNavbar()">
+                ☰
+            </button>
+        </div>
+        <nav class="main-nav" id="mainNav">
             <ul>
                 {% for item in site.data.navigation %}
                 <li {% if page.url == item.link %}class="active"{% else %}class="non-current"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a></li>
