@@ -25,3 +25,7 @@ permits:
 geometry: [37.396754679028604, -121.91708050969838]
 published: True
 ---
+
+## In the news
+
+["San Jose housing development advances with construction loan."](https://www.mercurynews.com/2025/02/14/san-jose-home-house-build-property-economy-loan-develop-real-estate/), *Mercury News*, February 19, 2025.

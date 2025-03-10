@@ -22,6 +22,14 @@ permits:
         address: 1655 Berryessa Rd, San Jose, CA 95131
         description: Development Permit Application to allow for the construction of up to 62 dwelling units in nine buildings on an approximately 2.09-net-acre site.
         names: ROB FACCHINO w/ BERRYESSA PROPERTIES; ERIK SCHOENNAUER w/ The Schoennauer Company; DEENA MORSILLI w/ HMH;
+    T24-007:
+        status: Under Review
+        initial_date: 2024-03-28
+        final_date: None
+        apn: [24103025]
+        address: 1655 Berryessa Rd, San Jose, CA 95131
+        description: Vesting tentative Map to subdivide 1 lot into 9 lots for 62 condominiums
+        names: Rob Facchino w/ Berryessa Properties; Erik Schoennauer; Deena Morsilli w/ HMH;
     PRE23-240:
         status: Expired
         initial_date: 2023-11-17
