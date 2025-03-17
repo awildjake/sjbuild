@@ -11,7 +11,7 @@ permits:
         initia_date: 2025-02-21
         final_date: None
         address: 3896 Stevens Creek Blvd, San Jose, CA 95117
-        descritption: Site Development Permit to allow two 8-story mixed use apartment buildings consisting of 532 units and 13,804 sft of retail space
+        description: Site Development Permit to allow two 8-story mixed use apartment buildings consisting of 532 units and 13,804 sft of retail space
         names: Alden Smith w/ Holland Development LLC;
     PRE24-315:
         status: Complete
