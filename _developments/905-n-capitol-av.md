@@ -17,3 +17,7 @@ permits:
 geometry: [37.3831364334949, -121.85753271311266]
 published: True
 ---
+
+## In the News
+
+["San Jose housing project with hundreds of apartments lands key loan."](https://www.mercurynews.com/2025/03/24/san-jose-home-build-property-economy-transit-develop-real-estate-house/)*The Mercury News*, March 24, 2025.
