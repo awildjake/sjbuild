@@ -4,10 +4,10 @@ address: 1565 Mabury Rd, San Jose, CA 95133
 developer: Affirmed Housing
 municipality: San Jose
 units: 195
-phase: Under Review
+phase: Approved
 permits:
     MP23-006:
-        status: Under Review
+        status: Permit Prepared
         initial_date: 2023-09-21
         final_date: 2025-01-15
         apn: [25417113]
