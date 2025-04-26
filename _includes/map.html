@@ -73,7 +73,7 @@
         {% elsif item.phase == 'Withdrawn'%}
         marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: withdrawnIcon}).addTo(withdrawnLayer);
         {% endif %}
-        marker.bindPopup("<h4>{{item.title}}</h4> {{item.units}} Units </br> By: {{item.developer}} </br> <em>Click to view details</em>");
+        marker.bindPopup("<strong>{{item.title}}</strong> </br> {{item.units}} Units </br> By: {{item.developer}} </br> <em>Click to view details</em>");
 
 
 
