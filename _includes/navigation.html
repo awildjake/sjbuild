@@ -1,0 +1,20 @@
+<!-- _includes/header.html -->
+<header>
+  <div class="nav-inner">
+    <a class="site-logo" href="/">SJ BUILD</a>
+    <button class="navbar-toggler" aria-label="Toggle navigation" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.getElementById('mainNav').classList.toggle('open')">
+      ☰
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <ul>
+        {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ item.link }}" {% if page.url == item.link %}class="active" aria-current="page"{% endif %}>
+            {{ item.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
