@@ -1,0 +1,48 @@
+---
+layout: default
+title: List
+---
+{% assign developments_by_units = site.developments | sort: "units" | reverse %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col">
+      <div class="box">
+        <div class="filter-dropdown">
+          <label for="phase-filter">Filter by Phase:</label>
+          <select id="phase-filter" class="filter-select">
+            <option value="All">All</option>
+            {% assign phases = site.developments | map: "phase" | uniq | sort %}
+            {% for phase in phases %}
+              <option value="{{ phase }}">{{ phase }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <h1>All Developments</h1>
+      <table class="feature" style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Units</th>
+            <th>Development</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="developments-list">
+          {% for development in developments_by_units %}
+          <tr data-phase="{{ development.phase }}">
+            <td>{{ development.units }}</td>
+            <td><a href="{{ development.url }}">{{ development.title }}</a></td>
+            <td>
+              {% assign phase_class = development.phase | downcase | replace: ' ', '-' %}
+              <span class="tag bg-{{ phase_class }} white">{{ development.phase }}</span>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

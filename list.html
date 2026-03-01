@@ -1,48 +1,709 @@
 ---
 layout: default
-title: List
+title: Developments
 ---
-{% assign developments_by_units = site.developments | sort: "units" | reverse %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 col">
-      <div class="box">
-        <div class="filter-dropdown">
-          <label for="phase-filter">Filter by Phase:</label>
-          <select id="phase-filter" class="filter-select">
-            <option value="All">All</option>
-            {% assign phases = site.developments | map: "phase" | uniq | sort %}
-            {% for phase in phases %}
-              <option value="{{ phase }}">{{ phase }}</option>
-            {% endfor %}
-          </select>
+<style>
+  /* ── Page layout ── */
+  .list-outer {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.2em;
+  }
+
+  .list-page {
+    display: flex;
+    min-height: calc(100vh - 56px);
+  }
+
+  /* ── Sidebar ── */
+  .list-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    border-right: 1px solid #e0e0e0;
+    padding: 28px 20px;
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .sidebar-section-label {
+    font-family: var(--font-nav);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+
+  /* Search */
+  .search-wrap {
+    position: relative;
+  }
+
+  .search-wrap svg {
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+  }
+
+  #list-search {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 7px 10px 7px 30px;
+    font-family: var(--font-nav);
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    background: #fafafa;
+    outline: none;
+    transition: border-color 0.15s;
+    -webkit-appearance: none;
+  }
+
+  #list-search:focus {
+    border-color: var(--nav-bg);
+    background: #fff;
+  }
+
+  #list-search::placeholder { color: #bbb; }
+
+  /* Phase filters */
+  .phase-filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .phase-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 8px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: none;
+    font-family: var(--font-nav);
+    font-size: 0.7rem;
+    color: #666;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background 0.1s, color 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .phase-btn:hover {
+    background: #f0f0f0;
+    color: var(--text-primary);
+  }
+
+  .phase-btn.active {
+    background: #eaf2f8;
+    color: var(--nav-bg);
+    border-color: #c0d8e8;
+  }
+
+  .phase-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50% !important;
+    border: none !important;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+
+  .phase-btn-count {
+    margin-left: auto;
+    font-size: 0.65rem;
+    color: #aaa;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat-box {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 10px;
+    background: #fafafa;
+  }
+
+  .stat-num {
+    font-family: var(--font-nav);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--nav-bg);
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+
+  .stat-label {
+    font-family: var(--font-nav);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #aaa;
+  }
+
+  /* ── Main content ── */
+  .list-main {
+    flex: 1;
+    padding: 28px 32px;
+    min-width: 0;
+  }
+
+  .list-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .list-toolbar h1 {
+    font-family: var(--font-nav);
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #aaa;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  #results-count {
+    font-family: var(--font-nav);
+    font-size: 0.7rem;
+    color: #aaa;
+  }
+
+  #results-count strong {
+    color: var(--text-primary);
+  }
+
+  /* ── Table ── */
+  .dev-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin-top: 0;
+  }
+
+  .dev-table thead tr {
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  .dev-table th {
+    font-family: var(--font-nav);
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #aaa;
+    padding: 0 12px 10px;
+    text-align: left;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .dev-table th:first-child { padding-left: 0; }
+
+  .dev-table th[data-sort-key] {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .dev-table th[data-sort-key]:hover {
+    color: var(--nav-bg);
+  }
+
+  .sort-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    opacity: 0.25;
+    font-style: normal;
+  }
+
+  .dev-table th.sort-active .sort-arrow {
+    opacity: 1;
+    color: var(--nav-bg);
+  }
+
+  .dev-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.1s;
+    cursor: pointer;
+  }
+
+  .dev-table tbody tr:hover { background: #f7f9fc; }
+
+  .dev-table td {
+    padding: 12px;
+    vertical-align: middle;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  .dev-table td:first-child { padding-left: 0; }
+
+  .td-units {
+    font-family: var(--font-nav);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--nav-bg);
+    white-space: nowrap;
+  }
+
+  .td-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    background-image: none !important;
+    padding-right: 0 !important;
+  }
+
+  .td-title a:hover {
+    color: var(--nav-bg);
+    text-decoration: underline;
+  }
+
+  .td-address {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 2px;
+  }
+
+  .td-developer {
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  .td-permits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .permit-chip {
+    font-family: var(--font-nav);
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #888;
+    white-space: nowrap;
+  }
+
+  tr.hidden { display: none; }
+
+  /* Column toggles */
+  .col-toggle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .col-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-family: var(--font-nav);
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.1s;
+  }
+
+  .col-toggle-label:hover {
+    background: #f0f0f0;
+    color: var(--text-primary);
+  }
+
+  .col-toggle-label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 3px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.1s, background 0.1s;
+  }
+
+  .col-toggle-label input[type="checkbox"]:checked {
+    background: var(--nav-bg);
+    border-color: var(--nav-bg);
+  }
+
+  .col-toggle-label input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 5px;
+    height: 8px;
+    border: 1.5px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+
+  .col-toggle-label input[type="checkbox"]:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  #empty-state {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: #aaa;
+    font-family: var(--font-nav);
+    font-size: 0.8rem;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    .list-page { flex-direction: column; }
+
+    .list-sidebar {
+      width: 100%;
+      position: static;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .stats-grid { grid-template-columns: repeat(4, 1fr); }
+    .list-main { padding: 20px 16px; }
+  }
+</style>
+
+{% assign total_units = 0 %}
+{% assign total_permits = 0 %}
+{% for d in site.developments %}
+  {% assign total_units = total_units | plus: d.units %}
+  {% assign total_permits = total_permits | plus: d.permits.size %}
+{% endfor %}
+{% assign developers = site.developments | map: "developer" | uniq | compact %}
+{% assign phases = site.developments | map: "phase" | uniq | compact | sort %}
+{% assign developments_sorted = site.developments | sort: "title" %}
+
+<div class="list-outer">
+<div class="list-page">
+
+  <!-- Sidebar -->
+  <aside class="list-sidebar">
+
+    <div>
+      <div class="sidebar-section-label">Search</div>
+      <div class="search-wrap">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search" id="list-search" placeholder="Title, address, developer…">
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-section-label">Phase</div>
+      <ul class="phase-filter-list">
+        <li>
+          <button class="phase-btn active" data-phase="all">
+            <span class="phase-dot" style="background:#ccc"></span>
+            All
+            <span class="phase-btn-count">{{ site.developments | size }}</span>
+          </button>
+        </li>
+        {% for phase in phases %}
+          {% assign phase_count = site.developments | where: "phase", phase | size %}
+          {% assign phase_class = phase | downcase | replace: ' ', '-' %}
+          <li>
+            <button class="phase-btn" data-phase="{{ phase }}">
+              <span class="phase-dot bg-{{ phase_class }}"></span>
+              {{ phase }}
+              <span class="phase-btn-count">{{ phase_count }}</span>
+            </button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <div class="sidebar-section-label">Columns</div>
+      <ul class="col-toggle-list">
+        <li>
+          <label class="col-toggle-label">
+            <input type="checkbox" data-toggle-col="units" checked> Units
+          </label>
+        </li>
+        <li>
+          <label class="col-toggle-label">
+            <input type="checkbox" data-toggle-col="developer"> Developer
+          </label>
+        </li>
+        <li>
+          <label class="col-toggle-label">
+            <input type="checkbox" data-toggle-col="phase" checked> Phase
+          </label>
+        </li>
+        <li>
+          <label class="col-toggle-label">
+            <input type="checkbox" data-toggle-col="permits"> Permits
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="sidebar-section-label">Overview</div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-num">{{ site.developments | size }}</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">{{ total_units | divided_by: 1000 }}k</div>
+          <div class="stat-label">Units</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">{{ total_permits }}</div>
+          <div class="stat-label">Permits</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">{{ developers | size }}</div>
+          <div class="stat-label">Developers</div>
         </div>
       </div>
     </div>
-    <div class="col-md-9">
+
+  </aside>
+
+  <!-- Main -->
+  <div class="list-main">
+
+    <div class="list-toolbar">
       <h1>All Developments</h1>
-      <table class="feature" style="width: 100%;">
-        <thead>
-          <tr>
-            <th>Units</th>
-            <th>Development</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="developments-list">
-          {% for development in developments_by_units %}
-          <tr data-phase="{{ development.phase }}">
-            <td>{{ development.units }}</td>
-            <td><a href="{{ development.url }}">{{ development.title }}</a></td>
-            <td>
-              {% assign phase_class = development.phase | downcase | replace: ' ', '-' %}
-              <span class="tag bg-{{ phase_class }} white">{{ development.phase }}</span>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div class="toolbar-right">
+        <span id="results-count">
+          <strong>{{ site.developments | size }}</strong> of {{ site.developments | size }}
+        </span>
+      </div>
     </div>
+
+    <table class="dev-table">
+      <thead>
+        <tr>
+          <th data-col="units" data-sort-key="units">Units <span class="sort-arrow">↕</span></th>
+          <th data-col="title" data-sort-key="title">Development <span class="sort-arrow">↕</span></th>
+          <th data-col="developer" data-sort-key="developer">Developer <span class="sort-arrow">↕</span></th>
+          <th data-col="phase" data-sort-key="phase">Phase <span class="sort-arrow">↕</span></th>
+          <th data-col="permits">Permits</th>
+        </tr>
+      </thead>
+      <tbody id="dev-tbody">
+        {% for development in developments_sorted %}
+        <tr data-phase="{{ development.phase }}"
+            data-units="{{ development.units | default: 0 }}"
+            data-title="{{ development.title | downcase }}"
+            data-developer="{{ development.developer | downcase }}"
+            data-phase-sort="{{ development.phase | downcase }}"
+            data-search="{{ development.title | downcase }} {{ development.address | downcase }} {{ development.developer | downcase }} {% for p in development.permits %}{{ p.id | downcase }} {% endfor %}">
+          <td class="td-units" data-col="units">{{ development.units | default: '—' }}</td>
+          <td class="td-title" data-col="title">
+            <a href="{{ development.url }}">{{ development.title }}</a>
+            <div class="td-address">{{ development.address }}</div>
+          </td>
+          <td class="td-developer" data-col="developer">{{ development.developer | default: '—' }}</td>
+          <td data-col="phase">
+            {% assign phase_class = development.phase | downcase | replace: ' ', '-' %}
+            <span class="tag bg-{{ phase_class }}">{{ development.phase }}</span>
+          </td>
+          <td data-col="permits">
+            <div class="td-permits">
+              {% for permit in development.permits limit: 4 %}
+                <span class="permit-chip">{{ permit.id }}</span>
+              {% endfor %}
+              {% if development.permits.size > 4 %}
+                <span class="permit-chip">+{{ development.permits.size | minus: 4 }}</span>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div id="empty-state">No developments match your filters.</div>
+
   </div>
 </div>
+</div>
+
+<script>
+  const tbody = document.getElementById('dev-tbody');
+  const searchInput = document.getElementById('list-search');
+  const sortSelect = document.getElementById('list-sort');
+  const resultsCount = document.getElementById('results-count');
+  const emptyState = document.getElementById('empty-state');
+
+  const totalCount = {{ site.developments | size }};
+
+  let searchQuery = '';
+  let activePhase = 'all';
+  let activeSortKey = 'title';
+  let activeSortDir = 'asc';
+
+  function applyFilters() {
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    let visible = 0;
+
+    rows.forEach(row => {
+      const phaseMatch = activePhase === 'all' || row.dataset.phase === activePhase;
+      const searchMatch = !searchQuery || (row.dataset.search || '').includes(searchQuery.toLowerCase());
+      if (phaseMatch && searchMatch) {
+        row.classList.remove('hidden');
+        visible++;
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+
+    resultsCount.innerHTML = `<strong>${visible}</strong> of ${totalCount}`;
+    emptyState.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  function applySort() {
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const dir = activeSortDir === 'asc' ? 1 : -1;
+
+    rows.sort((a, b) => {
+      if (activeSortKey === 'units') {
+        return dir * (parseInt(a.dataset.units || 0) - parseInt(b.dataset.units || 0));
+      }
+      if (activeSortKey === 'title') {
+        return dir * (a.dataset.title || '').localeCompare(b.dataset.title || '');
+      }
+      if (activeSortKey === 'developer') {
+        return dir * (a.dataset.developer || '').localeCompare(b.dataset.developer || '');
+      }
+      if (activeSortKey === 'phase') {
+        return dir * (a.dataset.phaseSort || '').localeCompare(b.dataset.phaseSort || '');
+      }
+      return 0;
+    });
+
+    rows.forEach(row => tbody.appendChild(row));
+  }
+
+  function updateSortIndicators() {
+    document.querySelectorAll('.dev-table th[data-sort-key]').forEach(th => {
+      const arrow = th.querySelector('.sort-arrow');
+      if (th.dataset.sortKey === activeSortKey) {
+        th.classList.add('sort-active');
+        arrow.textContent = activeSortDir === 'asc' ? '↑' : '↓';
+      } else {
+        th.classList.remove('sort-active');
+        arrow.textContent = '↕';
+      }
+    });
+  }
+
+  function update() {
+    applySort();
+    applyFilters();
+    updateSortIndicators();
+  }
+
+  // Column toggles
+  function initColumns() {
+    document.querySelectorAll('.col-toggle-list input[type="checkbox"]').forEach(cb => {
+      toggleColumn(cb.dataset.toggleCol, cb.checked);
+    });
+  }
+
+  function toggleColumn(col, visible) {
+    const display = visible ? '' : 'none';
+    document.querySelectorAll(`[data-col="${col}"]`).forEach(el => {
+      el.style.display = display;
+    });
+  }
+
+  document.querySelector('.col-toggle-list').addEventListener('change', e => {
+    const cb = e.target.closest('input[type="checkbox"]');
+    if (!cb || cb.disabled) return;
+    toggleColumn(cb.dataset.toggleCol, cb.checked);
+  });
+
+  initColumns();
+
+  // Search
+  searchInput.addEventListener('input', e => {
+    searchQuery = e.target.value.trim();
+    update();
+  });
+
+  // Column header sort
+  document.querySelector('.dev-table thead').addEventListener('click', e => {
+    const th = e.target.closest('th[data-sort-key]');
+    if (!th) return;
+    const key = th.dataset.sortKey;
+    if (key === activeSortKey) {
+      activeSortDir = activeSortDir === 'asc' ? 'desc' : 'asc';
+    } else {
+      activeSortKey = key;
+      activeSortDir = 'asc';
+    }
+    update();
+  });
+
+  // Phase filters
+  document.querySelector('.phase-filter-list').addEventListener('click', e => {
+    const btn = e.target.closest('.phase-btn');
+    if (!btn) return;
+    activePhase = btn.dataset.phase;
+    document.querySelectorAll('.phase-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    update();
+  });
+
+  // Init
+  update();
+</script>
