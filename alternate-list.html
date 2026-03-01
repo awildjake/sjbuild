@@ -206,20 +206,6 @@ title: Developments
     color: var(--text-primary);
   }
 
-  #list-sort {
-    font-family: var(--font-nav);
-    font-size: 0.72rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px 8px;
-    color: var(--text-primary);
-    background: #fafafa;
-    cursor: pointer;
-    outline: none;
-  }
-
-  #list-sort:focus { border-color: var(--nav-bg); }
-
   /* ── Table ── */
   .dev-table {
     width: 100%;
@@ -246,6 +232,27 @@ title: Developments
   }
 
   .dev-table th:first-child { padding-left: 0; }
+
+  .dev-table th[data-sort-key] {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .dev-table th[data-sort-key]:hover {
+    color: var(--nav-bg);
+  }
+
+  .sort-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    opacity: 0.25;
+    font-style: normal;
+  }
+
+  .dev-table th.sort-active .sort-arrow {
+    opacity: 1;
+    color: var(--nav-bg);
+  }
 
   .dev-table tbody tr {
     border-bottom: 1px solid #f0f0f0;
@@ -518,21 +525,16 @@ title: Developments
         <span id="results-count">
           <strong>{{ site.developments | size }}</strong> of {{ site.developments | size }}
         </span>
-        <select id="list-sort">
-          <option value="title">Title A→Z</option>
-          <option value="units-desc">Units ↓</option>
-          <option value="units-asc">Units ↑</option>
-        </select>
       </div>
     </div>
 
     <table class="dev-table">
       <thead>
         <tr>
-          <th data-col="units">Units</th>
-          <th data-col="title">Development</th>
-          <th data-col="developer">Developer</th>
-          <th data-col="phase">Phase</th>
+          <th data-col="units" data-sort-key="units">Units <span class="sort-arrow">↕</span></th>
+          <th data-col="title" data-sort-key="title">Development <span class="sort-arrow">↕</span></th>
+          <th data-col="developer" data-sort-key="developer">Developer <span class="sort-arrow">↕</span></th>
+          <th data-col="phase" data-sort-key="phase">Phase <span class="sort-arrow">↕</span></th>
           <th data-col="permits">Permits</th>
         </tr>
       </thead>
@@ -541,6 +543,8 @@ title: Developments
         <tr data-phase="{{ development.phase }}"
             data-units="{{ development.units | default: 0 }}"
             data-title="{{ development.title | downcase }}"
+            data-developer="{{ development.developer | downcase }}"
+            data-phase-sort="{{ development.phase | downcase }}"
             data-search="{{ development.title | downcase }} {{ development.address | downcase }} {{ development.developer | downcase }} {% for p in development.permits %}{{ p.id | downcase }} {% endfor %}">
           <td class="td-units" data-col="units">{{ development.units | default: '—' }}</td>
           <td class="td-title" data-col="title">
@@ -579,11 +583,13 @@ title: Developments
   const sortSelect = document.getElementById('list-sort');
   const resultsCount = document.getElementById('results-count');
   const emptyState = document.getElementById('empty-state');
+
   const totalCount = {{ site.developments | size }};
 
   let searchQuery = '';
   let activePhase = 'all';
-  let activeSort = 'title';
+  let activeSortKey = 'title';
+  let activeSortDir = 'asc';
 
   function applyFilters() {
     const rows = Array.from(tbody.querySelectorAll('tr'));
@@ -606,27 +612,47 @@ title: Developments
 
   function applySort() {
     const rows = Array.from(tbody.querySelectorAll('tr'));
+    const dir = activeSortDir === 'asc' ? 1 : -1;
+
     rows.sort((a, b) => {
-      if (activeSort === 'title')
-        return (a.dataset.title || '').localeCompare(b.dataset.title || '');
-      if (activeSort === 'units-desc')
-        return parseInt(b.dataset.units || 0) - parseInt(a.dataset.units || 0);
-      if (activeSort === 'units-asc')
-        return parseInt(a.dataset.units || 0) - parseInt(b.dataset.units || 0);
+      if (activeSortKey === 'units') {
+        return dir * (parseInt(a.dataset.units || 0) - parseInt(b.dataset.units || 0));
+      }
+      if (activeSortKey === 'title') {
+        return dir * (a.dataset.title || '').localeCompare(b.dataset.title || '');
+      }
+      if (activeSortKey === 'developer') {
+        return dir * (a.dataset.developer || '').localeCompare(b.dataset.developer || '');
+      }
+      if (activeSortKey === 'phase') {
+        return dir * (a.dataset.phaseSort || '').localeCompare(b.dataset.phaseSort || '');
+      }
       return 0;
     });
+
     rows.forEach(row => tbody.appendChild(row));
+  }
+
+  function updateSortIndicators() {
+    document.querySelectorAll('.dev-table th[data-sort-key]').forEach(th => {
+      const arrow = th.querySelector('.sort-arrow');
+      if (th.dataset.sortKey === activeSortKey) {
+        th.classList.add('sort-active');
+        arrow.textContent = activeSortDir === 'asc' ? '↑' : '↓';
+      } else {
+        th.classList.remove('sort-active');
+        arrow.textContent = '↕';
+      }
+    });
   }
 
   function update() {
     applySort();
     applyFilters();
+    updateSortIndicators();
   }
 
   // Column toggles
-  const HIDDEN_COL_CLASS = 'col-hidden';
-
-  // Apply initial state — developer and permits off by default
   function initColumns() {
     document.querySelectorAll('.col-toggle-list input[type="checkbox"]').forEach(cb => {
       toggleColumn(cb.dataset.toggleCol, cb.checked);
@@ -648,16 +674,27 @@ title: Developments
 
   initColumns();
 
+  // Search
   searchInput.addEventListener('input', e => {
     searchQuery = e.target.value.trim();
     update();
   });
 
-  sortSelect.addEventListener('change', e => {
-    activeSort = e.target.value;
+  // Column header sort
+  document.querySelector('.dev-table thead').addEventListener('click', e => {
+    const th = e.target.closest('th[data-sort-key]');
+    if (!th) return;
+    const key = th.dataset.sortKey;
+    if (key === activeSortKey) {
+      activeSortDir = activeSortDir === 'asc' ? 'desc' : 'asc';
+    } else {
+      activeSortKey = key;
+      activeSortDir = 'asc';
+    }
     update();
   });
 
+  // Phase filters
   document.querySelector('.phase-filter-list').addEventListener('click', e => {
     const btn = e.target.closest('.phase-btn');
     if (!btn) return;
@@ -666,4 +703,7 @@ title: Developments
     btn.classList.add('active');
     update();
   });
+
+  // Init
+  update();
 </script>
