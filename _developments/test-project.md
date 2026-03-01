@@ -1,19 +1,14 @@
 ---
-title:
-address:
-developer:
-municipality:
-units:
-phase:
-permits:
-    permit-number:
-        status:
-        initial_date:
-        final_date:
-        apn: []
-        address:
-        description:
-        names:
+title: null
+slug: test-project
+address: null
+developer: null
+municipality: null
+units: null
+phase: null
 geometry: []
-published: False
+permits:
+- id: permit-number
+  apn: []
+published: false
 ---

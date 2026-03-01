@@ -1,21 +1,29 @@
 ---
 title: Test Project Two
+slug: test-project-2
 address: 1234 Something St, San Jose, CA 95110
 developer: The Me Company
 municipality: San Jose
 units: 8000
 phase: Approved
+geometry:
+  lat: 37.25701990790024
+  lng: -121.92705211436862
 permits:
-    TEST24-003:
-        status: Approved
-        initial_date: 2024-01-01
-        final_date: 2025-01-01
-        apn: [34139485]
-        address: 1234 Something St, San Jose, CA 95110
-        description: A projec that proposed to build an insane amount of units. This thing is literally crazy. How are they even doing this? Is it allowed? I am not sure.
-        names: Dude w/ The Me Company;
-geometry: [37.25701990790024, -121.92705211436862]
-published: False
+- id: TEST24-003
+  status: Approved
+  initial_date: 2024-01-01
+  final_date: 2025-01-01
+  apn:
+  - 34139485
+  address: 1234 Something St, San Jose, CA 95110
+  description: A projec that proposed to build an insane amount of units. This thing is literally crazy. How are they even
+    doing this? Is it allowed? I am not sure.
+  contacts:
+  - name: Dude
+    company: The Me Company
+last_updated: '2025-01-01'
+published: false
 ---
 ## Header Level 2
 

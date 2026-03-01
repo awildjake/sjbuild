@@ -7,14 +7,11 @@ layout: default
             <hgroup class="development-header">
                 <h1 style="margin: 0;">{{page.title}}</h1>
                 <em>{{page.address}}</em>
-                <div >
-                    <span {% case page.phase %}
-                    {% when 'Under Review' %} class="tag bg-under-review"
-                    {% when 'Approved' %}class="tag bg-approved"
-                    {% when 'Withdrawn' %}class="tag bg-withdrawn"
-                    {% when 'Complete' %}class="tag bg-complete"{% endcase %}>{{page.phase}}</span>
-                    <span class="tag" >{{page.units}} Units</span>
-                    <span class="tag">{{page.developer}}</span>
+                <div>
+                    {% assign phase_class = page.phase | downcase | replace: ' ', '-' %}
+                    <span class="tag bg-{{ phase_class }}">{{ page.phase }}</span>
+                    <span class="tag">{{ page.units }} Units</span>
+                    <span class="tag">{{ page.developer }}</span>
                 </div>
             </hgroup>
         </div>
@@ -23,19 +20,41 @@ layout: default
                 <div class="map-container" style="box-shadow: 0 3px 10px rgba(0, 0, 0, .1);">
                     <div id="map"></div>
                 </div>
+
                 {{ content }}
+
+                {% if page.articles %}
+                <h2>In the News</h2>
+                {% assign articles_by_date = page.articles | sort: "date" | reverse %}
+                {% for article in articles_by_date %}
+                <p>
+                    <a href="{{ article.url }}">"{{ article.title }}."</a>
+                    {% if article.source %}<em>{{ article.source }}</em>,{% endif %}
+                    {% if article.date %}<span class="article-date">{{ article.date | date: "%B %-d, %Y" }}</span>.{% endif %}
+                </p>
+                {% endfor %}
+                {% endif %}
+
                 <h2>Permits</h2>
                 {% for permit in page.permits %}
-                    <p><strong><a href="https://sjpermits.org/permits/general/emailpermitquery.asp?permitnum={{permit[0]}}">{{permit[0]}}</a></strong> {{permit[1].status}}</p>
-                    <p>{{permit[1].description}}</p>
+                <div class="permit">
+                    <p>
+                        <strong>
+                            <a href="https://sjpermits.org/permits/general/emailpermitquery.asp?permitnum={{ permit.id }}">
+                                {{ permit.id }}
+                            </a>
+                        </strong>
+                    </p>
+                    <p>{{ permit.description }} {% if permit.initial_date %}{{ permit.initial_date | date: "%B %-d, %Y"}}{% endif %}.</p>
+                </div>
                 {% endfor %}
             </article>
             <div class="edit-metadata">
                 <span id="date">Last edited: {% last_modified_at %}</span>
-                <span id="contribute"><a href="https://github.com/awildjake/sjbuild/blob/main/_developments/{{page.name}}">Edit</a></span>
+                <span id="contribute"><a href="https://github.com/awildjake/sjbuild/blob/main/_developments/{{ page.name }}">Edit</a></span>
             </div>
         </div>
-
     </div>
 </div>
+
 {% include map.html geometry=page.geometry zoom=15 name="map" %}

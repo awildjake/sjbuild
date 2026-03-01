@@ -1,5 +1,5 @@
 <script>
-    var initialView = {{ include.geometry | jsonify }};
+    var initialView = [{{ include.geometry.lat }}, {{ include.geometry.lng }}];
     var initialZoom = {{ include.zoom }}
     var mapName = "{{ include.name }}"
 
@@ -25,7 +25,6 @@
     if (mapName === "mainMap" || mapName === "homeMap") {
         var layerControl = L.control.layers(null, overlayMaps, {collapsed:false, position:'topright'}).addTo(map);
     };
-    
 
     var underReviewIcon = new L.Icon({
         iconUrl: '/assets/images/leaflet_color_markers/marker-icon-2x-yellow.png',
@@ -64,31 +63,29 @@
     });
 
     {% for item in site.developments %}
-        {% if item.phase == 'Under Review'%}
-        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: underReviewIcon}).addTo(underReviewLayer);
-        {% elsif item.phase == 'Approved'%}
-        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: approvedIcon}).addTo(approvedLayer);
-        {% elsif item.phase == 'Complete'%}
-        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: completeIcon}).addTo(completeLayer);
-        {% elsif item.phase == 'Withdrawn'%}
-        marker = L.marker([{{item.geometry[0]}}, {{item.geometry[1]}}], {icon: withdrawnIcon}).addTo(withdrawnLayer);
+        {% if item.geometry.lat and item.geometry.lng %}
+        {% if item.phase == 'Under Review' %}
+        marker = L.marker([{{ item.geometry.lat }}, {{ item.geometry.lng }}], {icon: underReviewIcon}).addTo(underReviewLayer);
+        {% elsif item.phase == 'Approved' %}
+        marker = L.marker([{{ item.geometry.lat }}, {{ item.geometry.lng }}], {icon: approvedIcon}).addTo(approvedLayer);
+        {% elsif item.phase == 'Complete' %}
+        marker = L.marker([{{ item.geometry.lat }}, {{ item.geometry.lng }}], {icon: completeIcon}).addTo(completeLayer);
+        {% elsif item.phase == 'Withdrawn' %}
+        marker = L.marker([{{ item.geometry.lat }}, {{ item.geometry.lng }}], {icon: withdrawnIcon}).addTo(withdrawnLayer);
         {% endif %}
-        marker.bindPopup("<strong>{{item.title}}</strong> </br> {{item.units}} Units </br> By: {{item.developer}} </br> <em>Click to view details</em>");
-
-
-
+        marker.bindPopup("<strong>{{ item.title }}</strong> </br> {{ item.units }} Units </br> By: {{ item.developer }} </br> <em>Click to view details</em>");
         marker.on('mouseover', function() { this.openPopup() });
         marker.on('mouseout', function() { this.closePopup(); });
-        marker.on('click', function() { open('{{item.url}}', '_self'); });
-        //marker.on('click', function() { open('jake-wil.de/developments/{{ mylink | join: "-" }}/', '_blank'); });
+        marker.on('click', function() { open('{{ item.url }}', '_self'); });
+        {% endif %}
     {% endfor %}
 
     function getColor(d) {
         return d == 'Under Review' ? '#CAC428' :
             d == 'Approved'  ? '#2A81CB' :
             d == 'Complete'  ? '#2AAD27' :
-            d == 'Withdrawn'   ? '#7B7B7B' :
-                        '#555';
+            d == 'Withdrawn' ? '#7B7B7B' :
+                               '#555';
     }
 
     underReviewLayer.addTo(map);

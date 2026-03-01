@@ -1,69 +1,138 @@
 ---
 title: Stevens Creeek Promenade
+slug: stevens-creek-promenade
 address: 4300 Stevens Creek Blvd, San Jose, CA 95129
 developer: MPG Stevens Creek Owner
 municipality: San Jose
 units: 580
 phase: Approved
+geometry:
+  lat: 37.32279911350493
+  lng: -121.9780721323479
 permits:
-    PD24-022:
-        status: Under Review
-        initial_date: 2024-12-10
-        final_date: None
-        apn: [29638013]
-        address: 4360 STEVENS CREEK BL SAN JOSE, CA 95129-0000
-        description: Planned Development Permit to allow the removal of 12 trees (eight ordinance-size, four non-ordinance-size, and nine replacement trees) and the demolition of an approximately 10,400-square-foot commercial building for the construction of an approximately 5,245-square-foot restaurant (proposed Chick-fil-A), with an outdoor dining area, trash enclosure, and surface parking lot on an approximately 0.76-gross-acre site
-        names: Deena Morsilli w/ HMHca; MPG STEVENS CREEK OWNER LLC;
-    PRE24-302:
-        status: Complete
-        initial_date: 2024-10-24
-        final_date: 2024-11-14
-        apn: [29640009]
-        address: 4300 STEVENS CREEK BL SAN JOSE, CA 95129-0000
-        description: Focused Preliminary Review to change the use to allow a auto dealership use on the east half of the property.
-        names: Deena Morsilli w/ HMH; Perry Hariri w/ MPG Stevens Creek Owner LLC;
-    PDA20-012-01:
-        status: Approved
-        initial_date: 2023-12-08
-        final_date: 2024-01-31
-        apn: [29640009, 29638013, 29638014]
-        address: 4384 STEVENS CREEK BL SAN JOSE, CA 95129
-        description: Planned Development Permit Amendment to allow for the phasing of the project and the installation of bollards along the internal private drive on an approximately 10.0-gross-acre site.
-        names: Perry Hariri w/ MPG Stevens Creek Owner LLC; Deena Morsilli w/ HMH; Nicole Glanville w/ MPG Stevens Creek OWner LLC;
-    PD20-012:
-        status: Approved
-        initial_date: 2021-01-08
-        final_date: 2022-08-30
-        apn: [29640009, 29638013, 29638014]
-        address: 4384 STEVENS CREEK BL SAN JOSE, CA 95129
-        description: "Planned Development Permit to allow for the demolition of three existing commercial buildings (77,000 sf), the removal of 104 ordinance-size trees and 92 non-ordinance trees, and the construction of three multifamily residential buildings with 580 units, including 173 units of affordable housing, of which 116 units are subject to the State Density Bonus Law, and a 250-room hotel with 8,500 gross sf of ground floor retail with associated parking, landscaping, and amenities on 10.0 gross acres. Density Bonus Summary: - 116 affordable units, including 10% very low-income, 5% low income, and 5% moderate income - One Incentive to lower parking ratios to 0.5 spaces per unit for Building A and one spaces per unit for Buildings B and C"
-        names: Perry Hariri w/ MPG STEVENS CREEK OWNER LLC; Deena Morsilli w/ HMH and MPG STEVENS CREEK OWNER LLC;
-    PDA17-014-01:
-        status: Approved
-        initial_date: 2019-05-14
-        final_date: 2022-05-16
-        apn: [29640009]
-        address: 4300 STEVENS CREEK BL SAN JOSE, CA 95129-0000
-        description: lanned Development Permit Amendment to increase the office building square footage from the previously approved 233,000 sq. ft. to the maximum 300,000 sq. ft. as allowed under the approved zoning (File No. PDC16-036).
-        names: Stevens Creek Owner LLC; Zeferino Jimenez w/ HMH Engineers; Brian Milman w/ WENS; Deena Morsilli w/ HMH;
-    PD17-014:
-        status: Approved
-        initial_date: 2017-04-25
-        final_date: 2019-02-26
-        apn: [29640009, 29638014, 29638013]
-        address: 4384 Stevens Creek Blvd, San Jose, CA 95129
-        description: Planned Development Permit to allow the demolition of five existing buildings totaling approximately 105,980 square feet, the removal of 68 ordinance sized trees and to construct a 6-story approximately 233,000 square foot office building, a 6-story parking garage, a 8-story mixed use building containing approximately 10,000 square feet of ground floor commercial and up to 289 residential units, and a 8-story residential building containing approximately 205 market rate residential units and approximately 88 affordable residential units (total of up to 293 residential units) on a 10.0 gross acre site
-        names: Perry Hariri w/ Fortbay; Tom Armstrong w/ HMH Engineers; Stevens Creek Owner LLC;
-    PDC16-036:
-        status: Approved
-        initial_date: 2016-08-10
-        final_date: 2019-03-28
-        apn: [29640009, 29638014, 29638013]
-        address: 4300 STEVENS CREEK BL SAN JOSE, CA 95129-0000
-        description: Planned Development Zoning from the CG Commercial General Zoning District to a CP(PD) Planned Development Zoning District
-        names: Perry Hariri w/ Fortbay; Tom Armstrong w/ HMH;
-geometry: [37.32279911350493, -121.9780721323479]
-published: True
+- id: PD24-022
+  status: Under Review
+  initial_date: 2024-12-10
+  final_date: None
+  apn:
+  - 29638013
+  address: 4360 STEVENS CREEK BL SAN JOSE, CA 95129-0000
+  description: Planned Development Permit to allow the removal of 12 trees (eight ordinance-size, four non-ordinance-size,
+    and nine replacement trees) and the demolition of an approximately 10,400-square-foot commercial building for the construction
+    of an approximately 5,245-square-foot restaurant (proposed Chick-fil-A), with an outdoor dining area, trash enclosure,
+    and surface parking lot on an approximately 0.76-gross-acre site
+  contacts:
+  - name: Deena Morsilli
+    company: HMHca
+  - name: MPG STEVENS CREEK OWNER LLC
+- id: PRE24-302
+  status: Complete
+  initial_date: 2024-10-24
+  final_date: 2024-11-14
+  apn:
+  - 29640009
+  address: 4300 STEVENS CREEK BL SAN JOSE, CA 95129-0000
+  description: Focused Preliminary Review to change the use to allow a auto dealership use on the east half of the property.
+  contacts:
+  - name: Deena Morsilli
+    company: HMH
+  - name: Perry Hariri
+    company: MPG Stevens Creek Owner LLC
+- id: PDA20-012-01
+  status: Approved
+  initial_date: 2023-12-08
+  final_date: 2024-01-31
+  apn:
+  - 29640009
+  - 29638013
+  - 29638014
+  address: 4384 STEVENS CREEK BL SAN JOSE, CA 95129
+  description: Planned Development Permit Amendment to allow for the phasing of the project and the installation of bollards
+    along the internal private drive on an approximately 10.0-gross-acre site.
+  contacts:
+  - name: Perry Hariri
+    company: MPG Stevens Creek Owner LLC
+  - name: Deena Morsilli
+    company: HMH
+  - name: Nicole Glanville
+    company: MPG Stevens Creek OWner LLC
+- id: PD20-012
+  status: Approved
+  initial_date: 2021-01-08
+  final_date: 2022-08-30
+  apn:
+  - 29640009
+  - 29638013
+  - 29638014
+  address: 4384 STEVENS CREEK BL SAN JOSE, CA 95129
+  description: 'Planned Development Permit to allow for the demolition of three existing commercial buildings (77,000 sf),
+    the removal of 104 ordinance-size trees and 92 non-ordinance trees, and the construction of three multifamily residential
+    buildings with 580 units, including 173 units of affordable housing, of which 116 units are subject to the State Density
+    Bonus Law, and a 250-room hotel with 8,500 gross sf of ground floor retail with associated parking, landscaping, and amenities
+    on 10.0 gross acres. Density Bonus Summary: - 116 affordable units, including 10% very low-income, 5% low income, and
+    5% moderate income - One Incentive to lower parking ratios to 0.5 spaces per unit for Building A and one spaces per unit
+    for Buildings B and C'
+  contacts:
+  - name: Perry Hariri
+    company: MPG STEVENS CREEK OWNER LLC
+  - name: Deena Morsilli
+    company: HMH and MPG STEVENS CREEK OWNER LLC
+- id: PDA17-014-01
+  status: Approved
+  initial_date: 2019-05-14
+  final_date: 2022-05-16
+  apn:
+  - 29640009
+  address: 4300 STEVENS CREEK BL SAN JOSE, CA 95129-0000
+  description: lanned Development Permit Amendment to increase the office building square footage from the previously approved
+    233,000 sq. ft. to the maximum 300,000 sq. ft. as allowed under the approved zoning (File No. PDC16-036).
+  contacts:
+  - name: Stevens Creek Owner LLC
+  - name: Zeferino Jimenez
+    company: HMH Engineers
+  - name: Brian Milman
+    company: WENS
+  - name: Deena Morsilli
+    company: HMH
+- id: PD17-014
+  status: Approved
+  initial_date: 2017-04-25
+  final_date: 2019-02-26
+  apn:
+  - 29640009
+  - 29638014
+  - 29638013
+  address: 4384 Stevens Creek Blvd, San Jose, CA 95129
+  description: Planned Development Permit to allow the demolition of five existing buildings totaling approximately 105,980
+    square feet, the removal of 68 ordinance sized trees and to construct a 6-story approximately 233,000 square foot office
+    building, a 6-story parking garage, a 8-story mixed use building containing approximately 10,000 square feet of ground
+    floor commercial and up to 289 residential units, and a 8-story residential building containing approximately 205 market
+    rate residential units and approximately 88 affordable residential units (total of up to 293 residential units) on a 10.0
+    gross acre site
+  contacts:
+  - name: Perry Hariri
+    company: Fortbay
+  - name: Tom Armstrong
+    company: HMH Engineers
+  - name: Stevens Creek Owner LLC
+- id: PDC16-036
+  status: Approved
+  initial_date: 2016-08-10
+  final_date: 2019-03-28
+  apn:
+  - 29640009
+  - 29638014
+  - 29638013
+  address: 4300 STEVENS CREEK BL SAN JOSE, CA 95129-0000
+  description: Planned Development Zoning from the CG Commercial General Zoning District to a CP(PD) Planned Development Zoning
+    District
+  contacts:
+  - name: Perry Hariri
+    company: Fortbay
+  - name: Tom Armstrong
+    company: HMH
+last_updated: None
+published: true
 ---
 ## Description
 

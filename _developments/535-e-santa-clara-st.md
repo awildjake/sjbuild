@@ -1,21 +1,33 @@
 ---
 title: 535 East Santa Clara Street
+slug: 535-e-santa-clara-st
 address: 535 E Santa Clara St, San Jose, CA 95112
 developer: Tripalink
 municipality: San Jose
 units: 41
 phase: Approved
+geometry:
+  lat: 37.34177764257206
+  lng: -121.87948568813799
 permits:
-    H23-027:
-        status: Approved
-        initial_date: 2023-09-29
-        final_date: 2025-03-19
-        apn: [46716088]
-        address: 535 E Santa Clara St, San Jose, CA 95112
-        description: Site Development Permit to allow the demolition of an existing vacant building (restaurant) and the construction of a six-story mixed-use project with approximately 3,804 square feet of commercial space and 41 housing units on and removal of one ordinance-size tree on an approximately 0.436-gross acre site.
-        names: Jay Chang w/ Tripalink; donghao li w/ 535 E SANTA CLARA ST LLC; LE FAMILY HOLDING LLC
-geometry: [37.34177764257206, -121.87948568813799]
-published: True
+- id: H23-027
+  status: Approved
+  initial_date: 2023-09-29
+  final_date: 2025-03-19
+  apn:
+  - 46716088
+  address: 535 E Santa Clara St, San Jose, CA 95112
+  description: Site Development Permit to allow the demolition of an existing vacant building (restaurant) and the construction
+    of a six-story mixed-use project with approximately 3,804 square feet of commercial space and 41 housing units on and
+    removal of one ordinance-size tree on an approximately 0.436-gross acre site.
+  contacts:
+  - name: Jay Chang
+    company: Tripalink
+  - name: donghao li
+    company: 535 E SANTA CLARA ST LLC
+  - name: LE FAMILY HOLDING LLC
+last_updated: '2025-03-19'
+published: true
 ---
 
 ## In the News
