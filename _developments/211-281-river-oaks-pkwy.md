@@ -41,3 +41,5 @@ articles:
 last_updated: None
 published: true
 ---
+
+Project approved at Planning Director's Hearing on October 29th, 2025.
