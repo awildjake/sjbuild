@@ -23,6 +23,18 @@ permits:
   contacts:
   - name: Seena Haghshenas
   - name: Owner HAGHSHENAS ABBAS
-last_updated: None
+- id: PRE23-211
+  status: Complete
+  initial_date: 2023-11-05
+  final_date: 2023-12-20
+  apn:
+  - 26420064
+  address: 500 W San Carlos St, San Jose, CA 95126
+  description: "Enhanced preliminary review for construction of an eight-story, mixed-use building with 99 residential units and 2,670 square feet of ground-floor retail space on a 0.31-gross-acre site within the Diridon Station Area Plan."
+  contacts:
+  - name: Abbas Haghshenas
+    company: HAGHSHENAS ABBAS
+  - name: Zohreh Tabatabaie
+last_updated: 2026-03-03
 published: true
 ---
