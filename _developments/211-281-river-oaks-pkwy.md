@@ -42,4 +42,4 @@ last_updated: None
 published: true
 ---
 
-Project approved at Planning Director's Hearing on October 29th, 2025.
+Project approved at [Planning Director's Hearing](https://www.sanjoseca.gov/home/showpublisheddocument/126279/638979296523900000) on October 29th, 2025.
