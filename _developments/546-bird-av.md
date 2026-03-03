@@ -11,9 +11,9 @@ geometry:
   lng: -121.89802120688186
 permits:
 - id: PRE24-384
-  status: Under Review
+  status: Complete
   initial_date: 2024-12-18
-  final_date: None
+  final_date: 2025-02-03
   apn:
   - 26418052
   address: 546 Bird Ave., San Jose, CA 95125
@@ -21,6 +21,6 @@ permits:
   contacts:
   - name: Vince Rivero
     company: VER CONSULTANTS
-last_updated: None
+last_updated: 2026-03-03
 published: true
 ---
