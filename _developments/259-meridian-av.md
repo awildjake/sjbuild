@@ -5,11 +5,33 @@ address: 259 Meridian Ave, San Jose, CA 95126
 developer: Milestone Housing Group
 municipality: San Jose
 units: 154
-phase: Under Review
+phase: Approved
 geometry:
   lat: 37.32445653654505
   lng: -121.91417212641585
 permits:
+- id: MP23-007
+  status: Approved
+  initial_date: 2023-09-11
+  final_date: 2025-03-19
+  apn:
+  - 27414152
+  address: 259 Meridian Ave, San Jose, CA 95126
+  description: "AB 2162 Ministerial Permit to allow demolition of three commercial buildings totaling approximately 15,520 square feet, and construction of a 6-story, mixed-use project consisting of a 100 percent affordable rental building consisting of 154 residential units (including 39 PSH units and two manager units), and approximately 6,028 square feet of commercial space for a daycare use. The project also includes the removal of nine (9) non-ordinance size trees and SDB waivers (5) from various development standards, on a 1.37-acre-site in the West San Carlos Street (East) Urban Village."
+  contacts:
+  - name: Aaron Barger
+    company: Milestone Housing Group
+- id: PRE23-166
+  status: Complete
+  initial_date: 2023-09-11
+  final_date: None
+  apn:
+  - 27414152
+  address: 259 Meridian Ave, San Jose, CA 95126
+  description: SB 330 preapplication for 6 story building with 154 units
+  contacts:
+  - name: Marcus Griffin and Aaron Barger
+    company: Milestone Housing Group
 - id: PD19-011
   status: Withdrawn
   initial_date: 2019-04-10
@@ -26,33 +48,6 @@ permits:
     company: STRANGIS PROPERTIES
   - name: HOLMES BUSINESS LLC ETAL
   - name: KRISTA LIN
-- id: PRE23-166
-  status: Complete
-  initial_date: 2023-09-11
-  final_date: None
-  apn:
-  - 27414152
-  address: 259 Meridian Ave, San Jose, CA 95126
-  description: SB 330 preapplication for 6 story building with 154 units
-  contacts:
-  - name: Marcus Griffin and Aaron Barger
-    company: Milestone Housing Group
-- id: MP23-007
-  status: Under Review
-  initial_date: 2023-09-11
-  final_date: None
-  apn:
-  - 27414152
-  address: 259 Meridian Ave, San Jose, CA 95126
-  description: AB 2162 Ministerial Permit to allow demolition of three commercial buildings totaling approximately 15,520
-    square feet, and construction of a 6-story, mixed-use project consisting of a 100 percent affordable rental building consisting
-    of 154 residential units (including 39 PSH units and two manager units), and approximately 6,600 square feet of commercial
-    space for a daycare use. The project also includes the removal of ten (10) non-ordinance size trees and SDB waivers (6)
-    and concessions (2) from various development standards, on a 1.37-acre-site in the West San Carlos Street (East) Urban
-    Village.
-  contacts:
-  - name: Aaron Barger
-    company: Milestone Housing Group
 last_updated: None
 published: true
 ---
