@@ -28,6 +28,8 @@ permits:
   contacts:
   - name: MELANIE GRISWOLD
     company: Hestia Real Estate, Inc.
-last_updated: '2023-05-31'
+last_updated: '2026-03-03'
 published: true
 ---
+
+Special Use Permit expires 05/31/2027.
