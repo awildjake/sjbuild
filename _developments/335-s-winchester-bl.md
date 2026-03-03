@@ -10,6 +10,19 @@ geometry:
   lat: 37.322292726193986
   lng: -121.95061126156712
 permits:
+- id: SP25-009
+  status: New
+  initial_date: 
+  final_date: 
+  apn:
+  - 30339047
+  address: 335 S Winchester Blvd, San Jose, CA 95128
+  description: "Special use permit for demolition only no construction"
+  contacts:
+  - name: Paul Yu
+    company: Pacific Row Development
+  - name: Lee qin
+    company: Pacific Row Development
 - id: PRE24-112
   status: Complete
   initial_date: 2024-05-02
@@ -25,6 +38,6 @@ permits:
   - name: Lawrence DeSantis
     company: D3PA LLP
   - name: Pacific Row Development LLC
-last_updated: '2025-07-19'
+last_updated: 2026-03-03
 published: false
 ---
