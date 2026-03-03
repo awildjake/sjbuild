@@ -24,13 +24,17 @@ title: Developments
     padding: 28px 20px;
     position: sticky;
     top: 56px;
-    height: calc(100vh - 56px);
+    max-height: calc(100vh - 56px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 28px;
   }
 
+  .list-sidebar::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
+  }
+  
   .sidebar-section-label {
     font-family: var(--font-nav);
     font-size: 0.65rem;
@@ -397,6 +401,68 @@ title: Developments
     font-size: 0.8rem;
   }
 
+  /* Unit Count range slide styling */
+  .range-wrap {
+    padding-top: 4px;
+  }
+
+  .range-track-container {
+    position: relative;
+    height: 5px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    margin: 8px 0 14px;
+  }
+
+  .range-track-fill {
+    position: absolute;
+    height: 100%;
+    background: var(--nav-bg);
+    border-radius: 5px;
+  }
+
+  .range-inputs {
+    position: relative;
+    height: 5px;
+  }
+
+  .range-inputs input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: none;
+    top: -5px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .range-inputs input[type="range"]::-webkit-slider-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: var(--nav-bg);
+    pointer-events: auto;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px var(--nav-bg);
+  }
+
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-nav);
+    font-size: 0.65rem;
+    color: #aaa;
+    margin-top: 6px;
+  }
+
+  .range-labels span {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
   /* ── Mobile ── */
   @media (max-width: 768px) {
     .list-page { flex-direction: column; }
@@ -492,6 +558,23 @@ title: Developments
       </ul>
     </div>
 
+    <div>
+      <div class="sidebar-section-label">Unit Count</div>
+      <div class="range-wrap">
+        <div class="range-track-container">
+          <div class="range-track-fill" id="range-track-fill"></div>
+        </div>
+        <div class="range-inputs">
+          <input type="range" id="range-min" min="0" max="1000" value="0" step="1">
+          <input type="range" id="range-max" min="0" max="1000" value="1000" step="1">
+        </div>
+        <div class="range-labels">
+          <div>Min: <span id="range-min-label">0</span></div>
+          <div>Max: <span id="range-max-label">1000</span></div>
+        </div>
+      </div>
+    </div>
+
   </aside>
 
   <!-- Main -->
@@ -557,6 +640,60 @@ title: Developments
 
 <script>
   const tbody = document.getElementById('dev-tbody');
+
+  const rangeMinEl = document.getElementById('range-min');
+  const rangeMaxEl = document.getElementById('range-max');
+  const rangeMinLabel = document.getElementById('range-min-label');
+  const rangeMaxLabel = document.getElementById('range-max-label');
+  const rangeTrackFill = document.getElementById('range-track-fill');
+
+  const allUnits = Array.from(tbody.querySelectorAll('tr'))
+    .map(r => parseInt(r.dataset.units || 0));
+  const unitMin = Math.min(...allUnits);
+  const unitMax = Math.max(...allUnits);
+
+  [rangeMinEl, rangeMaxEl].forEach(el => { el.min = unitMin; el.max = unitMax; });
+  rangeMinEl.value = unitMin;
+  rangeMaxEl.value = unitMax;
+  rangeMinLabel.textContent = unitMin;
+  rangeMaxLabel.textContent = unitMax;
+
+  let activeUnitMin = unitMin;
+  let activeUnitMax = unitMax;
+
+  function updateRangeTrack() {
+    const min = parseInt(rangeMinEl.min);
+    const max = parseInt(rangeMinEl.max);
+    const left = ((activeUnitMin - min) / (max - min)) * 100;
+    const right = ((activeUnitMax - min) / (max - min)) * 100;
+    rangeTrackFill.style.left = left + '%';
+    rangeTrackFill.style.width = (right - left) + '%';
+  }
+
+  rangeMinEl.addEventListener('input', () => {
+    activeUnitMin = parseInt(rangeMinEl.value);
+    if (activeUnitMin > activeUnitMax) {
+      activeUnitMin = activeUnitMax;
+      rangeMinEl.value = activeUnitMin;
+    }
+    rangeMinLabel.textContent = activeUnitMin;
+    updateRangeTrack();
+    applyFilters();
+  });
+
+  rangeMaxEl.addEventListener('input', () => {
+    activeUnitMax = parseInt(rangeMaxEl.value);
+    if (activeUnitMax < activeUnitMin) {
+      activeUnitMax = activeUnitMin;
+      rangeMaxEl.value = activeUnitMax;
+    }
+    rangeMaxLabel.textContent = activeUnitMax;
+    updateRangeTrack();
+    applyFilters();
+  });
+
+  updateRangeTrack();
+
   const searchInput = document.getElementById('list-search');
   const sortSelect = document.getElementById('list-sort');
   const resultsCount = document.getElementById('results-count');
@@ -576,7 +713,9 @@ title: Developments
     rows.forEach(row => {
       const phaseMatch = activePhase === 'all' || row.dataset.phase === activePhase;
       const searchMatch = !searchQuery || (row.dataset.search || '').includes(searchQuery.toLowerCase());
-      if (phaseMatch && searchMatch) {
+      const units = parseInt(row.dataset.units || 0);
+      const unitsMatch = units >= activeUnitMin && units <= activeUnitMax;
+      if (phaseMatch && searchMatch && unitsMatch) {
         row.classList.remove('hidden');
         visible++;
       } else {
