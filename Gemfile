@@ -33,3 +33,7 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 gem 'bootstrap', '~> 5.3.3'
+
+# csv and base64 are no longer bundled by default in Ruby 3.4
+gem "csv"
+gem "base64"
