@@ -91,8 +91,3 @@ articles:
 last_updated: '2025-01-23'
 published: true
 ---
-## In the news
-
-["Financing Secured for Affordable Housing at 4300 Monterey Road, San Jose."](https://sfyimby.com/2024/06/financing-secured-for-affordable-housing-at-4300-monterey-road-san-jose.html)*SF YIMBY*, June 20, 2024.
-
-["Hundreds of affordable homes may sprout on empty San Jose lot after loan deal."](https://www.mercurynews.com/2024/06/12/san-jose-home-affordable-house-build-property-real-estate-economy/) *Mercury News*, June 12, 2024.
