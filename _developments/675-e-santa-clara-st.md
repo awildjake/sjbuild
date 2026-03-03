@@ -4,12 +4,27 @@ slug: 675-e-santa-clara-st
 address: 675 E Santa Clara St, San Jose, CA 95112
 developer: Eden Housing
 municipality: San Jose
-units: 214
+units: 218
 phase: Approved
 geometry:
   lat: 37.34435255488639
   lng: -121.87650969088824
 permits:
+- id: AD25-177
+  status: Approved
+  initial_date: 2025-04-09
+  final_date: 2025-07-02
+  apn:
+  - 46715084
+  address: 675 E Santa Clara St, San Jose, CA 95112
+  description: "Major Permit Adjustment to a previously approved Ministerial Permit (MP23-008) to reconfigure the senior housing building (Building B) from five stories to four stories, reduce total building area from 76,433 to 72,707 square feet, reduce building height from 59 feet, 9 inches to 53 feet, 3 inches, update facade design, reduce common open space from 9,576 to 5,822 square feet, and increase residential units from 64 to 68, comprising of (67) 1-bedroom units and (1) 2-bedroom manager's unit."
+  contacts:
+  - name: Samantha Meyer
+    company: Eden Housing
+  - name: Cecilia Perez
+    company: Eden Housing
+  - name: Consuelo Hernandez
+    company: County of Santa Clara
 - id: MP23-008
   status: Approved
   initial_date: 2023-11-21
@@ -43,6 +58,6 @@ permits:
   contacts:
   - name: Natalie Monk and Flaherty Ward
     company: SANTA CLARA COUNTY HOUSING AUTHORITY
-last_updated: '2024-11-18'
+last_updated: 2026-03-03
 published: true
 ---
