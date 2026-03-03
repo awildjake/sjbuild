@@ -11,7 +11,7 @@ geometry:
   lng: -121.83327378354824
 permits:
 - id: H24-016
-  status: Under Review
+  status: Inactive
   initial_date: 2024-06-25
   final_date: None
   apn:
@@ -51,6 +51,6 @@ permits:
   - name: Erik Schoennauer
     company: SCHOENNAUER CO LLC, THE
   - name: LOMANACO IGNATIUS JR ET AL
-last_updated: None
+last_updated: 2026-03-03
 published: true
 ---
