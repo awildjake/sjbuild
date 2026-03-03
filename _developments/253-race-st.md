@@ -5,7 +5,7 @@ address: 253 Race St, San Jose, CA 95126
 developer: Santa Clara County Housing Authority
 municipality: San Jose
 units: 206
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.32484312509018
   lng: -121.91196981895911
