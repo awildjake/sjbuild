@@ -11,22 +11,19 @@ geometry:
   lng: -121.85772168325302
 permits:
 - id: H24-004
-  status: Under Review
+  status: Inactive
   initial_date: 2024-01-31
   final_date: None
   apn:
   - 46435033
   - 46435027
   address: 873 Blossom Hill Rd, San Jose, CA 95123
-  description: Development Permit Application to allow the demolition of two commercial buildings totaling approximately 27,020
-    square feet and the removal of 98 trees for the construction of 162 dwelling units with 43 accessory dwelling units reserved
-    for low-income households earning up to 80% of Area Median Income in 25 buildings on an approximately 6.74-gross-acre
-    site.
+  description: "Site Development Permit Application to allow the construction of 162 dwelling units in 25 buildings, with 20 units reserved for low-income households earning up to 80% of Area Median Income, through the demolition of two commercial buildings totaling approximately 27,020 square feet and the removal of 98 trees (54 ordinance-size and 44 non-ordinance-size) on an approximately 6.74-gross-acre site."
   contacts:
   - name: Kurt Anderson
     company: Anderson Architects
   - name: Michael LaBarbera
     company: Blossom Hill LLC
-last_updated: None
+last_updated: 2026-03-03
 published: true
 ---
