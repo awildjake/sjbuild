@@ -7,8 +7,8 @@ municipality: San Jose
 units: 272
 phase: Under Review
 geometry:
-  lat: 37.32393929654639
-  lng: -121.90591281167434
+  lat: 37.32321360219114
+  lng: -121.90676692369841
 permits:
 - id: H25-045
   status: Under Review
