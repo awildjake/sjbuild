@@ -39,3 +39,5 @@ permits:
 last_updated: '2023-03-28'
 published: true
 ---
+
+Approved Special Use Permit expires on March 28, 2027.
