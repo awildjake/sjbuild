@@ -27,6 +27,6 @@ articles:
     source: Mercury News
     author: George Avalos
     date: 2025-03-24
-last_updated: '2022-06-30'
+last_updated: 2026-03-03
 published: true
 ---
