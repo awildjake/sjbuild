@@ -17,11 +17,10 @@ permits:
   apn:
   - 25932106
   address: 188 W Julian St, San Jose, CA 95110
-  description: Focused Preliminary Review Request to construct a five-story 100% affordable housing development consisting
-    of 205 units over two stories of at-grade podium parking, on an approximately 0.88-acre site.
+  description: "Focused Preliminary Review Request to construct a five-story 100% affordable housing development consisting of 205 units over two stories of at-grade podium parking, on an approximately 0.88-acre site."
   contacts:
   - name: Farin Piran
     company: Swenson
-last_updated: '2024-09-24'
+last_updated: 2026-03-03
 published: true
 ---
