@@ -4,7 +4,7 @@ slug: 931-meridian-av
 address: 931 Meridian Ave, San Jose, CA 95126
 developer: Aria Build & Construction
 municipality: San Jose
-units: 53
+units: 0
 phase: Under Review
 geometry:
   lat: 37.30942569992425
@@ -36,5 +36,5 @@ permits:
   - name: Amir Moeini
     company: ARIA BUILD & CONSTRUCTION INC
 last_updated: '2024-11-05'
-published: true
+published: false
 ---
