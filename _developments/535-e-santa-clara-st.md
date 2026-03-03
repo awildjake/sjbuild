@@ -26,10 +26,12 @@ permits:
   - name: donghao li
     company: 535 E SANTA CLARA ST LLC
   - name: LE FAMILY HOLDING LLC
-last_updated: '2025-03-19'
+articles:
+  - title: Demolition Permit Filed for 535 East Santa Clara Street, Naglee Park, San Jose
+    url: https://sfyimby.com/2025/03/demolition-permit-filed-for-535-east-santa-clara-street-naglee-park-san-jose.html
+    source: SF YIMBY
+    author: YIMBY Team
+    date: 2025-03-19
+last_updated: 2026-03-03
 published: true
 ---
-
-## In the News
-
-["Demolition Permit Filed for 535 East Santa Clara Street, Naglee Park, San Jose."](https://sfyimby.com/2025/03/demolition-permit-filed-for-535-east-santa-clara-street-naglee-park-san-jose.html)*SF YIMBY*, March 19, 2025.
