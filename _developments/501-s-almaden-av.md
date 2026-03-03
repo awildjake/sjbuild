@@ -4,25 +4,24 @@ slug: 501-s-almaden-av
 address: 501 S Almaden Ave, San Jose, CA 95110
 developer: Satellite Affordable Housing Associates
 municipality: San Jose
-units: 53
-phase: Approved
+units: 99
+phase: Under Review
 geometry:
   lat: 37.32686144037418
   lng: -121.8884723591382
 permits:
-- id: PRE22-012
-  status: Complete
-  initial_date: 2022-01-24
-  final_date: 2022-03-23
+- id: MP26-003
+  status: New
+  initial_date: 2026-01-28
+  final_date: 
   apn:
   - 26431007
   - 26431006
   address: 501 S Almaden Ave, San Jose, CA 95110
-  description: Enhanced Preliminary Review for an eight-story senior affordable housing project with 86 residential units
-    on an approximately 0.27-gross acre site.
+  description: "Ministerial amendment to MP22-012 to increase units from 53 to 99 units which includes one manager's unit. Affordability will be for incomes between 30-60% AMI"
   contacts:
-  - name: Evelyn Perdomo
-    company: SAHA Homes
+  - name: Michelle Williams
+    company: Satellite Affordable Housing Associates
 - id: MP22-012
   status: Complete
   initial_date: 2022-12-15
@@ -39,6 +38,21 @@ permits:
   contacts:
   - name: Michelle Williams
     company: Satellite Affordable Housing Associates
+- id: PRE22-012
+  status: Complete
+  initial_date: 2022-01-24
+  final_date: 2022-03-23
+  apn:
+  - 26431007
+  - 26431006
+  address: 501 S Almaden Ave, San Jose, CA 95110
+  description: Enhanced Preliminary Review for an eight-story senior affordable housing project with 86 residential units
+    on an approximately 0.27-gross acre site.
+  contacts:
+  - name: Evelyn Perdomo
+    company: SAHA Homes
 last_updated: '2023-09-01'
 published: true
 ---
+
+Project approved at 53 units. New permit under review to raise unit count to 99.
