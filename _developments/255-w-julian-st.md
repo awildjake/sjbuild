@@ -11,20 +11,16 @@ geometry:
   lng: -121.89671618895639
 permits:
 - id: H24-049
-  status: Under Review
+  status: Approved
   initial_date: 2024-08-27
   final_date: 2025-04-09
   apn:
   - 25931071
   address: 255 W Julian St, San Jose, CA 95110
-  description: Site Development Permit to allow either Option A, consisting of the construction of a 14-story office building
-    with ground-floor retail space and four underground parking levels and exterior modifications to an existing six-story
-    office building, as approved under File No. SP21-037, or Option B, consisting of the construction of an 18-story, mixed-use
-    tower with 600 residential units, ground-floor retail space, and four levels of underground parking, and a Vesting Tentative
-    Map to merge five lots into one, on an approximately 1.8-gross-acre site.
+  description: "Site Development Permit to allow either Option A, consisting of the construction of a 14-story office building with ground-floor retail space and four underground parking levels and exterior modifications to an existing six-story office building, as approved under File No. SP21-037, or Option B, consisting of the construction of an 18-story, mixed-use tower with 600 residential units, ground-floor retail space, and four levels of underground parking, and a Vesting Tentative Map to merge five lots into one, on an approximately 1.8-gross-acre site."
   contacts:
   - name: Project West Julian LLC
   - name: Westbank
-last_updated: '2025-04-09'
+last_updated: 2026-03-03
 published: true
 ---
