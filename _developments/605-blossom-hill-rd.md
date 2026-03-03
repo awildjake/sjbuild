@@ -4,12 +4,36 @@ slug: 605-blossom-hill-rd
 address: 605 Blossom Hill Rd, Los Gatos, CA 95032
 developer: Republic Urban
 municipality: San Jose
-units: 239
-phase: Approved
+units: 89
+phase: Under Review
 geometry:
   lat: 37.251435563574496
   lng: -121.84104213872737
 permits:
+- id: SPA20-012-01
+  status: Under Review
+  initial_date: 2025-12-22
+  final_date: 
+  apn:
+  - 46422032
+  address: 605 Blossom Hill Rd, Los Gatos, CA 95032
+  description: "Special Use Permit Amendment to allow the construction of 89 units, 100% affordable, including changes to the previously approved exterior articulation and footprint."
+  contacts:
+  - name: David Egan
+    company: Blossom Hill NC
+  - name: GRAHAM BOOTH
+    company: HKIT ARCHITECT
+- id: TE20-012
+  status: Approved
+  initial_date: 2025-01-10
+  final_date: None
+  apn:
+  - 46422032
+  address: 605 Blossom Hill Rd, Los Gatos, CA 95032
+  description: "Vesting Tentative Map Extension for two years of the previously approved Vesting Tentative Map Permit File No. T20-012 to allow two lots on the approximately 7.42-gross acre Project Site to be merged into one lot and subdivided into five lots in association with Special Use Permit SP20-012, as amended"
+  contacts:
+  - name: Melissa Durkin
+    company: Green Republic Blossom Hill LLC
 - id: SP20-012
   status: Approved
   initial_date: 2020-04-15
@@ -28,17 +52,8 @@ permits:
   contacts:
   - name: Melissa Durkin
     company: Green Republic Blossom Hill LLC
-- id: TE20-012
-  status: Under Review
-  initial_date: 2025-01-10
-  final_date: None
-  apn:
-  - 46422032
-  address: 605 Blossom Hill Rd, Los Gatos, CA 95032
-  description: Tentative map extension for previously approved Tentative Map (T20-012)
-  contacts:
-  - name: Melissa Durkin
-    company: Green Republic Blossom Hill LLC
 last_updated: None
 published: true
 ---
+
+Special Use Permit expires 08/09/2026. Previously approved for 239 units.
