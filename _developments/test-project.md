@@ -22,6 +22,11 @@ permits:
   - name: 
     company: 
 articles:
+  - title:
+    url:
+    source:
+    author:
+    date:
 last_updated: 
 published: true
 ---
