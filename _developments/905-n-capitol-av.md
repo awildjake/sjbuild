@@ -5,7 +5,7 @@ address: 905 N Capitol Ave, San Jose, CA 95133
 developer: Hanover
 municipality: San Jose
 units: 345
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.3831364334949
   lng: -121.85753271311266
@@ -17,19 +17,16 @@ permits:
   apn:
   - 25429028
   address: 905 N Capitol Ave, San Jose, CA 95133
-  description: A Site Development Permit to allow the demolition of an existing single-family residential building and two
-    accessory structures, the removal of 10 ordinance-sized trees and 24 non-ordinance-sized trees, and the construction of
-    a 7-story mixed-use building consisting of 345 apartment units and approximately 3,000 square feet of office space with
-    one level of underground parking and a parking reduction on a 2.12-acre site (APN 254-29-028), and to allow the removal
-    of 6 ordinance-sized trees and 2 non-ordinance-sized trees, and the construction of four three-story, 8-unit townhouse
-    buildings on a 1.35-acre site (APN 254-29-026).
+  description: "A Site Development Permit to allow the demolition of an existing single-family residential building and two accessory structures, the removal of 10 ordinance-sized trees and 24 non-ordinance-sized trees, and the construction of a 7-story mixed-use building consisting of 345 apartment units and approximately 3,000 square feet of office space with one level of underground parking and a parking reduction on a 2.12-acre site (APN 254-29-028), and to allow the removal of 6 ordinance-sized trees and 2 non-ordinance-sized trees, and the construction of four three-story, 8-unit townhouse buildings on a 1.35-acre site (APN 254-29-026)."
   contacts:
   - name: Scott Youdall
     company: The Hanover Company
+articles:
+  - title: San Jose housing project with hundreds of apartments lands key loan
+    url: https://www.mercurynews.com/2025/03/24/san-jose-home-build-property-economy-transit-develop-real-estate-house/
+    source: Mercury News
+    author: George Avalos
+    date: 2025-03-24
 last_updated: '2022-06-30'
 published: true
 ---
-
-## In the News
-
-["San Jose housing project with hundreds of apartments lands key loan."](https://www.mercurynews.com/2025/03/24/san-jose-home-build-property-economy-transit-develop-real-estate-house/)*The Mercury News*, March 24, 2025.
