@@ -18,7 +18,7 @@ permits:
   - 26431007
   - 26431006
   address: 501 S Almaden Ave, San Jose, CA 95110
-  description: "Ministerial amendment to MP22-012 to increase units from 53 to 99 units which includes one manager's unit. Affordability will be for incomes between 30-60% AMI"
+  description: "Ministerial amendment to MP22-012 to increase units from 53 to 99 units which includes one manager's unit. Affordability will be for incomes between 30-60% AMI."
   contacts:
   - name: Michelle Williams
     company: Satellite Affordable Housing Associates
