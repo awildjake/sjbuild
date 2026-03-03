@@ -34,7 +34,7 @@ title: Developments
   .list-sidebar::-webkit-scrollbar {
     display: none;                /* Chrome/Safari */
   }
-  
+
   .sidebar-section-label {
     font-family: var(--font-nav);
     font-size: 0.65rem;
@@ -550,11 +550,6 @@ title: Developments
             <input type="checkbox" data-toggle-col="phase" checked> Phase
           </label>
         </li>
-        <li>
-          <label class="col-toggle-label">
-            <input type="checkbox" data-toggle-col="permits"> Permits
-          </label>
-        </li>
       </ul>
     </div>
 
@@ -596,7 +591,7 @@ title: Developments
           <th data-col="title" data-sort-key="title">Development <span class="sort-arrow">↕</span></th>
           <th data-col="developer" data-sort-key="developer">Developer <span class="sort-arrow">↕</span></th>
           <th data-col="phase" data-sort-key="phase">Phase <span class="sort-arrow">↕</span></th>
-          <th data-col="permits">Permits</th>
+          <!--<th data-col="permits">Permits</th>-->
         </tr>
       </thead>
       <tbody id="dev-tbody">
@@ -617,7 +612,7 @@ title: Developments
             {% assign phase_class = development.phase | downcase | replace: ' ', '-' %}
             <span class="tag bg-{{ phase_class }}">{{ development.phase }}</span>
           </td>
-          <td data-col="permits">
+          <!--<td data-col="permits">
             <div class="td-permits">
               {% for permit in development.permits limit: 4 %}
                 <span class="permit-chip">{{ permit.id }}</span>
@@ -626,7 +621,7 @@ title: Developments
                 <span class="permit-chip">+{{ development.permits.size | minus: 4 }}</span>
               {% endif %}
             </div>
-          </td>
+          </td>-->
         </tr>
         {% endfor %}
       </tbody>
