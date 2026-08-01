@@ -32,6 +32,17 @@ permits:
   contacts:
   - name: Chris Dart, McKenzie Dibble, Hailey Del Grande
     company: DANCO
+articles:
+  - title: Danco Leases Property for Affordable Housing Infill in San Jose
+    url: https://sfyimby.com/2023/06/danco-leases-property-for-affordable-housing-infill-in-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2023-06-25
 last_updated: 2026-03-03
+notes: Construction.
 published: true
 ---
+
+## Details
+
+777 West San Carlos is under construction.
