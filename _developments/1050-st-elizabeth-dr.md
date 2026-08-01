@@ -25,6 +25,12 @@ permits:
   - name: Rocky Shen
     company: DNA Design and Architecture
   - name: ERIK SCHOENNAUER
-last_updated: '2023-04-19'
+articles:
+  - title: Seven-Story Housing for 1050 Saint Elizabeth Drive Approved in San Jose
+    url: https://sfyimby.com/2023/04/seven-story-housing-for-1050-saint-elizabeth-drive-approved-in-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2023-04-26
+last_updated: 2026-08-01
 published: true
 ---
