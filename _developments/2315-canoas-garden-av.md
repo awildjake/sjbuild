@@ -24,6 +24,7 @@ permits:
   contacts:
   - name: Steve Lynch
     company: Sand Hill Property Company
-last_updated: '2023-01-10'
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
