@@ -44,6 +44,11 @@ articles:
     source: San Jose Spotlight
     author: Vicente Vera
     date: 2024-07-02
-last_updated: 2026-03-03
+last_updated: 2026-08-01
+notes: Construction.
 published: true
 ---
+
+## Details
+
+681 E Trimble Road is under construction.
