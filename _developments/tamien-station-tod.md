@@ -5,7 +5,7 @@ address: 1197 Lick Ave, San Jose, CA 95110
 developer: Republic Urban
 municipality: San Jose
 units: 434
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.31221138453271
   lng: -121.88316703764922
@@ -28,3 +28,11 @@ permits:
 last_updated: '2020-12-21'
 published: true
 ---
+
+## Details
+
+The Tamien station apartments are complete.
+
+## Links
+
+[Developer website](https://thecorecompanies.com/project/tamien-station/) ([Archived](https://web.archive.org/web/20260801192200/https://thecorecompanies.com/project/tamien-station/) from original on August 1, 2026.)
