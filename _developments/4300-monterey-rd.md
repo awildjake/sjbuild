@@ -88,6 +88,7 @@ articles:
     url: https://www.mercurynews.com/2024/06/...
     source: Mercury News
     date: 2024-06-12
-last_updated: '2025-01-23'
+last_updated: 2026-08-01
+notes: Construction
 published: true
 ---
