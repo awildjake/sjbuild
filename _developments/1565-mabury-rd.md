@@ -37,6 +37,12 @@ permits:
   contacts:
   - name: Rob Wilkins
     company: Affirmed Housing Group
+articles:
+  - title: Affordable homes project near San Jose BART station gets boost from real estate deal
+    url: https://www.mercurynews.com/2026/05/21/home-san-jose-house-build-economy-affordable-property-develop-bart/
+    source: The Mercury News
+    author: George Avalos
+    date: 2026-05-21
 last_updated: 2026-08-01
 notes: "No construction."
 published: true
