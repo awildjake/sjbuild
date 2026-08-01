@@ -38,5 +38,11 @@ permits:
     feet of commercial space with associated parking and landscaping, located on an approximately 0.52-gross-acre site. The
     project utilizes the State Density Bonus Law to exceed the allowed height, and State Density Bonus Law provisions are
     granted, including three concessions (requirements for commercial space, building stepdowns, and common open space).
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
+
+## Links
+
+[City Website](https://www.sanjoseca.gov/your-government/departments-offices/planning-building-code-enforcement/planning-division/environmental-planning/environmental-review/negative-declaration-initial-studies/julian-and-tripp-mixed-use-development-project) ([Archived](https://web.archive.org/web/20260801184538/https://www.sanjoseca.gov/your-government/departments-offices/planning-building-code-enforcement/planning-division/environmental-planning/environmental-review/negative-declaration-initial-studies/julian-and-tripp-mixed-use-development-project) from original on August 1, 2026.)
