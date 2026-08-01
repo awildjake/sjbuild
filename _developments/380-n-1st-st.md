@@ -56,6 +56,21 @@ articles:
     source: SF YIMBY
     author: YIMBY Team
     date: 2025-03-18
-last_updated: 2026-03-03
+  - title: Demolition Permits Filed for 380 North 1st Street, San Jose
+    url: https://sfyimby.com/2025/07/demolition-permits-filed-for-380-north-1st-street-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2025-07-22
+  - title: San Jose apartment project to reduce affordable housing
+    url: https://sanjosespotlight.com/san-jose-apartment-project-to-reduce-affordable-housing/
+    source: San Jose Spotlight
+    author: Vicente Vera
+    date: 2025-02-14
+last_updated: 2026-08-01
+notes: Construction in progress, pics on Reddit.
 published: true
 ---
+
+## Details
+
+This project is under construction.
