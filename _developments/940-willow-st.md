@@ -41,6 +41,12 @@ articles:
     source: San Jose Spotlight
     author: Keith Menconi
     date: 2025-12-15
-last_updated: 2026-03-03
+  - title: San Jose resident sues city over 7-story apartment project
+    url: https://sanjosespotlight.com/san-jose-resident-sues-city-over-7-story-apartment-project/
+    source: San Jose Spotlight
+    author: Keith Menconi
+    date: 2026-05-01
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
