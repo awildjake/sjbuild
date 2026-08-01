@@ -60,6 +60,13 @@ permits:
     company: Kimco Realty
   - name: Scott Henson
     company: Weingarten Realty
-last_updated: '2022-11-02'
+articles:
+  - title: Cambrian Park Plaza, A Beloved San José Strip Mall, Awaits a New Future
+    url: https://www.kqed.org/news/12079104/cambrian-park-plaza-a-beloved-san-jose-strip-mall-awaits-a-new-future
+    source: KQED
+    author: Katrina Schwartz
+    date: 2026-04-09
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
