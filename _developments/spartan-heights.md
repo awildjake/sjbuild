@@ -45,6 +45,11 @@ permits:
   contacts:
   - name: Brent Lee
     company: RPRO152N3 LLC
-last_updated: '2023-10-18'
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
+
+## Links
+
+[Renderings by LPMD Architects](https://lpmd-architects.com/portfolio/spartan-heights/) ([Archived](https://web.archive.org/web/20260801190618/https://lpmd-architects.com/portfolio/spartan-heights/) from original on August 1, 2026.)
