@@ -5,7 +5,7 @@ address: 2350 S Bascom Ave, Campbell, CA 95008
 developer: Maracor Development
 municipality: San Jose
 units: 123
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.28123253324379
   lng: -121.9311662456093
@@ -24,6 +24,6 @@ permits:
   contacts:
   - name: Brad Dickason
     company: Maracor Development
-last_updated: '2022-02-04'
+last_updated: 2026-08-01
 published: true
 ---
