@@ -27,6 +27,7 @@ permits:
   - name: Willie Pyle
     company: City Ventures
   - name: Jean Tina Trustee
-last_updated: 2026-03-03
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
