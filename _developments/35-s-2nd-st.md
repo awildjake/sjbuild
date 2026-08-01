@@ -21,8 +21,11 @@ permits:
   contacts:
   - name: Project Fountain Alley LLC
   - name: Westbank
-last_updated: None
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
+
+## Details
 
 Project approved at [Planning Director's Hearing](https://www.sanjoseca.gov/home/showpublisheddocument/127351/639015869805100000) on December 17, 2025.
