@@ -39,3 +39,7 @@ last_updated: 2026-08-01
 notes: "Construction."
 published: true
 ---
+
+## Details
+
+This project is under construction.
