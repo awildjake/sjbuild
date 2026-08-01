@@ -64,9 +64,10 @@ articles:
     author: Andrew Nelson
     date: 2025-08-01
 last_updated: None
+notes: "Construction."
 published: true
 ---
 
 ## Details
 
-Click [here](https://www.kooserarcade.com/) to view the webpage for Arcade Apartments.
+This project is under construction. Click [here](https://www.kooserarcade.com/) to view the webpage for Arcade Apartments.
