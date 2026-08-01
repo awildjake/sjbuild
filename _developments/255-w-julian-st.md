@@ -21,6 +21,7 @@ permits:
   contacts:
   - name: Project West Julian LLC
   - name: Westbank
-last_updated: 2026-03-03
+last_updated: 2026-08-01
+notes: No construction
 published: true
 ---
