@@ -28,6 +28,12 @@ permits:
     company: Cord Associates
   - name: Polaris Brown
     company: EMC PLANNING GROUP
+articles:
+  - title: Detailed Plans Published for 1065 South Winchester Boulevard in West San Jose
+    url: https://sfyimby.com/2022/03/detailed-plans-published-for-1065-south-winchester-boulevard-in-west-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2022-03-10
 last_updated: 2026-08-01
 notes: "No construction."
 published: true
