@@ -36,8 +36,17 @@ permits:
     commercial space and 270 units of 100% affordable housing for senior citizens on an approximately 0.21-gross acre site.
   contacts:
   - name: Kurt D. Anderson
-last_updated: '2023-03-28'
+articles:
+  - title: City Council Approves 19 North 2nd Street for Downtown San Jose
+    url: https://sfyimby.com/2023/04/city-council-approves-19-north-2nd-street-for-downtown-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2023-04-07
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
+
+## Details
 
 Approved Special Use Permit expires on March 28, 2027.
