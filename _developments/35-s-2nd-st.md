@@ -21,6 +21,12 @@ permits:
   contacts:
   - name: Project Fountain Alley LLC
   - name: Westbank
+articles:
+  - title: New Renderings For BIG-Designed Tower in Downtown San Jose
+    url: https://sfyimby.com/2025/12/new-renderings-for-big-designed-tower-in-downtown-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2025-12-12
 last_updated: 2026-08-01
 notes: No construction.
 published: true
