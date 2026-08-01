@@ -25,6 +25,11 @@ permits:
   contacts:
   - name: Paul Bunton
     company: Advocacy Development Partners
-last_updated: '2020-09-29'
+last_updated: 2026-08-01
+notes: Construction
 published: true
 ---
+
+## Details
+
+2375 South Bascom Avenue is currently under construction.
