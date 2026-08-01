@@ -32,6 +32,17 @@ articles:
     source: SF YIMBY
     author: YIMBY Team
     date: 2025-03-19
-last_updated: 2026-03-03
+  - title: Property Sale for Approved Student Housing at 535 East Santa Clara Street, San Jose
+    url: https://sfyimby.com/2025/09/property-sale-for-approved-student-housing-at-535-east-santa-clara-street-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2025-09-07
+  - title: Student housing proposed at former San Jose restaurant site
+    url: https://www.siliconvalley.com/2025/08/26/san-jose-home-build-property-economy-student-develop-real-estate-sjsu/
+    source: SiliconValley
+    author: George Avalos
+    date: 2025-08-26
+last_updated: 2026-08-01
+notes: No construction
 published: true
 ---
