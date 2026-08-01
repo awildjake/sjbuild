@@ -24,6 +24,12 @@ permits:
   contacts:
   - name: Steve Lynch
     company: Sand Hill Property Company
+articles:
+  - title: Plans for Housing at Cathedral of Faith Parking Lot in South San Jose
+    url: https://sfyimby.com/2023/01/plans-for-housing-at-cathedral-of-faith-parking-lot-in-south-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2023-01-28
 last_updated: 2026-08-01
 notes: No construction.
 published: true
