@@ -18,6 +18,13 @@ permits:
     of a 6-story mixed-use building consisting of 61 residential condo units and approximately 17,970 square feet of commercial
     space, and allow the removal of 9 ordinance size trees and 7 non-ordinance size trees on a 0.82-gross acre site, in the
     Winchester Boulevard Urban Village.
-last_updated: '2021-08-25'
+articles:
+  - title: New Renderings Revealed for 1073-1087 South Winchester Boulevard, West San Jose
+    url: https://sfyimby.com/2021/05/new-renderings-revealed-for-1073-1087-south-winchester-boulevard-west-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2021-05-28
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
