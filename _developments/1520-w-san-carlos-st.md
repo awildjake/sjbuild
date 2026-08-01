@@ -25,6 +25,12 @@ permits:
   contacts:
   - name: Viji Mani
     company: Urban Villas LLC
+articles:
+  - title: Meeting Tonight For A Seven-Story Proposal At 1520 West San Carlos, San Jose
+    url: https://sfyimby.com/2021/08/meeting-tonight-for-a-seven-story-proposal-at-1520-west-san-carlos-san-jose.html
+    source: SF YIMBY
+    author: Team YIMBY
+    date: 2021-08-02
 last_updated: 2026-08-01
 notes: "No construction."
 published: true
