@@ -29,6 +29,7 @@ permits:
   - name: Perry Hariri
     company: M & M Diridon LLC
   - name: Miramar Diridon Development
-last_updated: '2022-05-10'
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
