@@ -63,6 +63,12 @@ permits:
     on an approximately 10.6-gross acre site.
   contacts:
   - name: Sand Hill Property Company
+articles:
+  - title: Construction Underway For El Paseo de Saratoga, San Jose
+    url: https://sfyimby.com/2025/08/construction-underway-for-el-paseo-de-saratoga-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2025-08-15
 last_updated: 2026-08-01
 notes: Construction.
 published: true
