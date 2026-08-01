@@ -5,7 +5,7 @@ address: 1975 Cambrianna Dr, San Jose, CA 95124
 developer: Robson Homes
 municipality: San Jose
 units: 21
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.26530554652233
   lng: -121.9288668045327
@@ -25,6 +25,6 @@ permits:
   - name: Mark Robson
     company: Robson Homes
   - name: Cambrian School District
-last_updated: '2022-08-30'
+last_updated: 2026-08-01
 published: true
 ---
