@@ -5,7 +5,7 @@ address: 2388 S Bascom Ave, San Jose, CA 95124
 developer: CRP Affordable Housing
 municipality: San Jose
 units: 64
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.279244792227146
   lng: -121.93139374722672
@@ -23,6 +23,10 @@ permits:
   contacts:
   - name: Sam Knutson
     company: CRP Affordable Housing and Community Dev
-last_updated: '2023-01-27'
+last_updated: 2026-08-01
 published: true
 ---
+
+## Details
+
+Click [here](https://www.drycreekcrossing.com/) for the building's website.
