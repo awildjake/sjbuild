@@ -26,6 +26,11 @@ permits:
   contacts:
   - name: Regina Williams
     company: First Community Housing
-last_updated: '2020-02-11'
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
+
+## Links
+
+[Renderings by SERA](https://www.seradesign.com/projects/mcevoy-and-dupont-apartments/) ([Archived](https://web.archive.org/web/20260801184928/https://www.seradesign.com/projects/mcevoy-and-dupont-apartments/) from original on August 8, 2026.)
