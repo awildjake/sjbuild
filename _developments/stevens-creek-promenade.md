@@ -131,7 +131,8 @@ permits:
     company: Fortbay
   - name: Tom Armstrong
     company: HMH
-last_updated: None
+last_updated: 2026-08-01
+notes: Construction. Complex.
 published: true
 ---
 ## Description
