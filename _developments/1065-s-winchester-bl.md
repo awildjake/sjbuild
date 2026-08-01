@@ -28,6 +28,7 @@ permits:
     company: Cord Associates
   - name: Polaris Brown
     company: EMC PLANNING GROUP
-last_updated: '2022-10-25'
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
