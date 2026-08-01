@@ -29,6 +29,13 @@ permits:
     company: Corporation for Better Housing
   - name: MELANIE GRISWOLD
     company: Hestia Real Estate, Inc.
-last_updated: '2024-12-11'
+articles:
+  - title: Construction Financing Secured For Affordable Housing at 1271-1279 East Julian Street, San Jose
+    url: https://sfyimby.com/2025/08/construction-financing-secured-for-affordable-housing-at-1271-1279-east-julian-street-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2025-08-08
+last_updated: 2026-08-01
+notes: "Construction."
 published: true
 ---
