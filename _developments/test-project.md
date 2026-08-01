@@ -30,3 +30,11 @@ articles:
 last_updated: 
 published: true
 ---
+
+## Details
+
+Project description and information.
+
+## Links
+
+[Renderings by Architect](url) ([Archived](wayback machine url) from original on month day, year.)
