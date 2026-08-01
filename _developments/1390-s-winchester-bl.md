@@ -4,7 +4,7 @@ slug: 1390-s-winchester-bl
 address: 1390 Winchester Blvd, San Jose, CA 95128
 developer: Charities Housing
 municipality: San Jose
-units: 103
+units: 101
 phase: Approved
 geometry:
   lat: 37.29860458934895
@@ -29,6 +29,7 @@ permits:
     company: County of Santa Clara
   - name: Jovanny Escareno
     company: Charities Housing
-last_updated: '2024-06-11'
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
