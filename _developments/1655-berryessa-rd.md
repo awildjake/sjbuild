@@ -139,9 +139,22 @@ permits:
   - name: Berryessa Properties
   - name: ERIK SCHOENNAUER
   - name: STICKLER MAUREEN TRUSTEE & ET AL
-last_updated: None
+articles:
+  - title: San Jose affordable housing development could sprout near BART stop
+    url: https://www.mercurynews.com/2025/01/28/san-jose-home-housing-affordable-build-property-develop-real-estate/
+    source: The Mercury News
+    author: George Avalos
+    date: 2025-01-28
+  - title: Project Launches for 1655 Berryessa Road Transit Oriented Development
+    url: https://sfyimby.com/2025/10/transit-oriented-development-at-1655-berryessa-road-launches-phase-one.html
+    source: SF YIMBY
+    author: Gabriel Clark-Clough
+    date: 2025-10-23
+last_updated: 2026-08-01
+notes: "Construction."
 published: true
 ---
-## In the news
 
-["San Jose affordable housing development could sprout near BART stop."](https://www.mercurynews.com/2025/01/28/san-jose-home-housing-affordable-build-property-develop-real-estate/) *Mercury News*, January 28, 2025.
+## Details
+
+This project is under construction.
