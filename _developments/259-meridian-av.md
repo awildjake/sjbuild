@@ -48,6 +48,7 @@ permits:
     company: STRANGIS PROPERTIES
   - name: HOLMES BUSINESS LLC ETAL
   - name: KRISTA LIN
-last_updated: None
+last_updated: 2026-08-01
+Notes: No construction.
 published: true
 ---
