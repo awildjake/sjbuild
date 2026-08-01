@@ -35,6 +35,13 @@ permits:
     approximately 0.29-gross acre site.
   contacts:
   - name: Kurt B. Anderson
-last_updated: 2026-03-03
+articles:
+  - title: Approval + New Renderings for 605 South Second Street High-Rise, Downtown San Jose
+    url: https://sfyimby.com/2021/12/approval-new-renderings-for-605-south-second-street-high-rise-downtown-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2021-12-28
+last_updated: 2026-08-01
+notes: Construction.
 published: true
 ---
