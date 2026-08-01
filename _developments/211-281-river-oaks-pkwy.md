@@ -2,7 +2,7 @@
 title: 211-281 River Oaks Parkway
 slug: 211-281-river-oaks-pkwy
 address: 281 River Oaks Pkwy, San Jose, CA 95134
-developer: Valley Oak Partners
+developer: TPG
 municipality: San Jose
 units: 737
 phase: Approved
@@ -38,8 +38,16 @@ articles:
     source: SF YIMBY
     author: Andrew Nelson
     date: 2023-07-19
-last_updated: None
+  - title: New Owners Purchase Site for Previously Planned Development at 211-281 River Oaks Parkway in San Jose
+    url: https://sfyimby.com/2026/02/new-owners-purchase-site-for-previously-planned-development-at-211-281-river-oaks-parkway-in-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2026-02-04
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
 
-Project approved at [Planning Director's Hearing](https://www.sanjoseca.gov/home/showpublisheddocument/126279/638979296523900000) on October 29th, 2025.
+## Details
+
+Project approved at [Planning Director's Hearing](https://www.sanjoseca.gov/home/showpublisheddocument/126279/638979296523900000) on October 29th, 2025. The project was purchased by a new owner in 2026.
