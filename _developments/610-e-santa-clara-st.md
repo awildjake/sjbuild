@@ -22,6 +22,7 @@ permits:
   contacts:
   - name: Sophie Xu
     company: HS Santa Clara LLC
-last_updated: None
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
