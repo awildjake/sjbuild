@@ -25,6 +25,7 @@ permits:
   contacts:
   - name: Viji Mani
     company: Urban Villas LLC
-last_updated: '2023-07-12'
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
