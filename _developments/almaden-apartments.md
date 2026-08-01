@@ -36,6 +36,7 @@ permits:
   contacts:
   - name: Rob Wilkins
     company: Affirmed Housing Group Inc
-last_updated: '2023-10-06'
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
