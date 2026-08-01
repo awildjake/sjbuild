@@ -58,6 +58,7 @@ permits:
   contacts:
   - name: Natalie Monk and Flaherty Ward
     company: SANTA CLARA COUNTY HOUSING AUTHORITY
-last_updated: 2026-03-03
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
