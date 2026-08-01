@@ -29,3 +29,7 @@ permits:
 last_updated: '2022-08-03'
 published: true
 ---
+
+## Details
+
+Click [here](https://www.viewatblossomhill.com/) to view the webpage for View at Blossom Hill.
