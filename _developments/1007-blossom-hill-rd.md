@@ -5,7 +5,7 @@ address: 1007 Blossom Hill Rd, San Jose, CA 95123
 developer: Jemcor Development Partners
 municipality: San Jose
 units: 271
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.25110591307352
   lng: -121.86835595887128
