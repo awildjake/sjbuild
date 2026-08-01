@@ -28,8 +28,22 @@ permits:
   contacts:
   - name: MELANIE GRISWOLD
     company: Hestia Real Estate, Inc.
-last_updated: '2026-03-03'
+articles:
+  - title: Large Scale Housing Proposed At 70 North 27th Street In San Jose
+    url: https://sfyimby.com/2022/01/large-scale-housing-proposed-at-70-north-27th-street-in-san-jose.html
+    source: SF YIMBY
+    author: Team YIMBY
+    date: 2022-01-19
+  - title: Renderings Revealed, MND Published for 70 North 27th Street in Five Wounds, San Jose
+    url: https://sfyimby.com/2023/04/renderings-revealed-mnd-published-for-70-north-27th-street-in-five-wounds-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2023-04-16
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
+
+## Details
 
 Special Use Permit expires 05/31/2027.
