@@ -45,3 +45,7 @@ last_updated: 2026-08-01
 notes: Construction.
 published: true
 ---
+
+## Details
+
+605 S 2nd Street is under construction.
