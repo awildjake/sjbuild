@@ -22,10 +22,13 @@ permits:
     parking spaces provided underground and at grade using automated stackers, and a request for one incentive and five waivers
     of development and design requirements pursuant to the state Density Bonus law, on an approximately 0.55-gross-acre vacant
     lot in The Alameda (West) Urban Village.
-last_updated: '2025-04-09'
+articles:
+  - title: New Modular Housing Proposed on The Alameda San Jose
+    url: https://sfyimby.com/2025/04/new-modular-housing-proposed-on-the-alameda-san-jose.html
+    source: SF YIMBY
+    author: Gabriel Clark-Clough
+    date: 2025-04-14
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
-
-## In the news
-
-["New Modular Housing Proposed on The Alameda San Jose."](https://sfyimby.com/2025/04/new-modular-housing-proposed-on-the-alameda-san-jose.html)*SF YIMBY*, April 14, 2025.
