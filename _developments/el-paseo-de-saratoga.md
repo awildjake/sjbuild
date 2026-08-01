@@ -63,10 +63,12 @@ permits:
     on an approximately 10.6-gross acre site.
   contacts:
   - name: Sand Hill Property Company
-last_updated: '2024-12-10'
+last_updated: 2026-08-01
+notes: Construction.
 published: true
 ---
-## Description
+
+## Details
 
 El Paseo de Saratoga by Sand Hill Property Company proposes a 4-building mixed-use urban village with 772 units, a 263-bed senior care facility, and a Whole Foods grocery store all on a 10.76 acre site.
 
