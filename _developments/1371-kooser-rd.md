@@ -57,6 +57,12 @@ permits:
     company: Affirmed Housing Group Inc.
   - name: James Silverwood
     company: Kooser Apartments, L, P.
+articles:
+  - title: Groundbreaking Soon For 1371 Kooser Road, San Jose
+    url: https://sfyimby.com/2025/07/groundbreaking-soon-for-1371-kooser-road-san-jose.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2025-07-14
 last_updated: None
 published: true
 ---
