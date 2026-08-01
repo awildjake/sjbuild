@@ -38,6 +38,11 @@ permits:
     company: Affirmed Housing
   - name: Patricia Christiansen
     company: First Community Housing
-last_updated: '2022-09-23'
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
+
+## Links
+
+[Renderings by David Baker Architects](https://www.dbarchitect.com/projects/villages-995-east-santa-clara) ([Archived](https://web.archive.org/web/20260521012230/https://www.dbarchitect.com/projects/villages-995-east-santa-clara) from original on August 8, 2026.)
