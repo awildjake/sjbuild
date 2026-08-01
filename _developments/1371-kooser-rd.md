@@ -62,7 +62,11 @@ articles:
     url: https://sfyimby.com/2025/07/groundbreaking-soon-for-1371-kooser-road-san-jose.html
     source: SF YIMBY
     author: Andrew Nelson
-    date: 2025-07-14
+    date: 2026-08-01
 last_updated: None
 published: true
 ---
+
+## Details
+
+Click [here](https://www.kooserarcade.com/) to view the webpage for Arcade Apartments.
