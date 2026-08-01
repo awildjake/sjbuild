@@ -22,6 +22,13 @@ permits:
     three non-ordinance-size) for the construction of an eight-story mixed use building consisting of 237 multifamily residential
     units and approximately 16,962 square feet of commercial space with an approximately 48% parking reduction on an approximately
     1.34 gross acre site.
-last_updated: '2023-06-28'
+articles:
+  - title: Plans for 1530 West San Carlos, San Jose, Listed for $41 Million
+    url: https://sfyimby.com/2023/04/plans-for-1530-west-san-carlos-san-jose-listed-for-41-million.html
+    source: SF YIMBY
+    author: Andrew Nelson
+    date: 2023-04-02
+last_updated: 2026-08-01
+notes: "No construction."
 published: true
 ---
