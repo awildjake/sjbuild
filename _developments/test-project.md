@@ -28,7 +28,7 @@ articles:
     author:
     date:
 last_updated: 
-published: true
+published: false
 ---
 
 ## Details
