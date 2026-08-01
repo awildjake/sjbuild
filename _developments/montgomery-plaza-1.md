@@ -28,9 +28,17 @@ permits:
     company: ROYGBIV
   - name: Kurt Anderson
     company: Anderson Architects
-last_updated: '2022-12-14'
+articles:
+  - title: Downtown San Jose housing tower proposal doubles homes and height
+    url: https://www.mercurynews.com/2021/06/09/downtown-san-jose-housing-tower-doubles-height-home-real-estate-google/
+    source: Mercury News
+    author: George Avalos
+    date: 2021-06-09
+last_updated: 2026-08-01
+notes: No construction.
 published: true
 ---
-## In the news
 
-["Downtown San Jose housing tower proposal doubles homes and height."](https://www.mercurynews.com/2021/06/09/downtown-san-jose-housing-tower-doubles-height-home-real-estate-google/) *Mercury News*, June 9, 2021.
+## Links
+
+[City website](https://www.sanjoseca.gov/your-government/departments-offices/planning-building-code-enforcement/planning-division/environmental-planning/environmental-review/h21-027-and-h21-028-addendum-to-the-downtown-strategy-2040-feir-for-montgomery-plaza-mixed-use-development) ([Archived](https://web.archive.org/web/20260801185808/https://www.sanjoseca.gov/your-government/departments-offices/planning-building-code-enforcement/planning-division/environmental-planning/environmental-review/h21-027-and-h21-028-addendum-to-the-downtown-strategy-2040-feir-for-montgomery-plaza-mixed-use-development) from original on August 1, 2026.)
