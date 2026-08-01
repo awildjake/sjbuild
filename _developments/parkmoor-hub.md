@@ -1,11 +1,11 @@
 ---
-title: Parkmoor (HUB)
+title: The Hub
 slug: parkmoor-hub
 address: 1510-1540 Parkmoor Ave, San Jose, CA 95126
 developer: Abode
 municipality: San Jose
 units: 81
-phase: Approved
+phase: Complete
 geometry:
   lat: 37.31634007949949
   lng: -121.91531003502251
@@ -40,9 +40,11 @@ permits:
   - name: Tina Lee
     company: Allied Housing, Inc.
   - name: Santa Clara County
-last_updated: '2023-01-27'
+last_updated: 2026-08-01
+Notes: Construction is complete.
 published: true
 ---
-## Description
 
-Parkmoor HUB is under construction. You can view the developer's website [here](https://abode.org/parkmoor-hub).
+## Details
+
+The Hub is complete. You can view the developer's website [here](https://abode.org/parkmoor-hub).
