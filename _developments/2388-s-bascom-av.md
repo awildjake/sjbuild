@@ -29,4 +29,4 @@ published: true
 
 ## Details
 
-Click [here](https://www.drycreekcrossing.com/) for the building's website.
+Click [here](https://www.drycreekcrossing.com/) to view the webpage for Dry Creek Crossing.
